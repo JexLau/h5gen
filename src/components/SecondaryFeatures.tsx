@@ -1,14 +1,15 @@
 'use client'
 
-import { useId } from 'react'
+import { useEffect, useId } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import screenshotExtension from '@/images/screenshots/chrome-extension.png'
+import screenshotData from '@/images/screenshots/data-csv-file-page.png'
+import screenshotResults from '@/images/screenshots/export-your-results.png'
+import { useWindowSize } from '@/hooks/useWindowSize'
 
 interface Feature {
   name: React.ReactNode
@@ -20,11 +21,10 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
-    description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
-    image: screenshotProfitLoss,
+    name: 'Easy to Use',
+    summary: 'Navigate through an intuitive interface designed for efficiency. Start scraping with just a few clicks!',
+    description: 'Our Maps Scraper is built with the user in mind, featuring a straightforward setup that requires no technical expertise. Whether you\'re a business owner, researcher, or marketer, you can quickly learn to navigate and use the tool to its full potential.',
+    image: screenshotExtension,
     icon: function ReportingIcon() {
       let id = useId()
       return (
@@ -54,12 +54,11 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Inventory',
+    name: 'Time Saving',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
-    description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
-    image: screenshotInventory,
+      'Leverage accurate and detailed map data to make informed decisions and grow your business.',
+    description: 'In the digital age, data is power. Our Maps Scraper helps you harness that power by providing detailed and accurate data from various map sources. Use this data to uncover insights, identify trends, and make decisions that drive business growth.',
+    image: screenshotResults,
     icon: function InventoryIcon() {
       return (
         <>
@@ -82,12 +81,12 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Contacts',
+    name: 'Empower Your Business',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Access a wide array of data points including reviews, images, phone numbers, email addresses, and social media profiles.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
-    image: screenshotContacts,
+    `With our tool, you don't just get basic information; you get a comprehensive dataset. From contact details to social media profiles, images, and reviews, you can access a variety of data types that provide a complete picture of the businesses or locations you're interested in.`,
+    image: screenshotData,
     icon: function ContactsIcon() {
       return (
         <>
@@ -120,6 +119,7 @@ function Feature({
       className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
       {...props}
     >
+      <div className='flex items-center'>
       <div
         className={clsx(
           'w-9 rounded-lg',
@@ -132,16 +132,17 @@ function Feature({
       </div>
       <h3
         className={clsx(
-          'mt-6 text-sm font-medium',
+          'ml-2 text-lg font-medium',
           isActive ? 'text-blue-600' : 'text-slate-600',
         )}
       >
         {feature.name}
       </h3>
+      </div>
       <p className="mt-2 font-display text-xl text-slate-900">
         {feature.summary}
       </p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
+      {/* <p className="mt-4 text-sm text-slate-600">{feature.description}</p> */}
     </div>
   )
 }
@@ -225,6 +226,8 @@ function FeaturesDesktop() {
 }
 
 export function SecondaryFeatures() {
+  const size = useWindowSize()
+
   return (
     <section
       id="secondary-features"
@@ -234,15 +237,13 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+          Simplify Your Map Data Scraping
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+          Our tool is designed to simplify the process of extracting valuable data from various maps, providing you with the most efficient and user-friendly scraping experience.
           </p>
         </div>
-        <FeaturesMobile />
-        <FeaturesDesktop />
+        {size.width <= 1024 ? <FeaturesMobile /> : <FeaturesDesktop />}
       </Container>
     </section>
   )

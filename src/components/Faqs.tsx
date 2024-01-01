@@ -6,55 +6,32 @@ import backgroundImage from '@/images/background-faqs.jpg'
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+      "question": "How can the tool obtain email addresses if they are not visible on Google Maps?",
+      "answer": "Our Google Maps scraper extends its search beyond Maps by visiting each business's official website found through Google Maps. It searches for contact pages or directly listed email addresses, thereby providing you with email details not typically found on Google Maps itself."
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
-    },
-    {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+      "question": "Is the Google Maps extractor compatible with Mac or is it Windows exclusive?",
+      "answer": "Our browser-based Google Maps extractor is versatile and runs on any operating system that supports Chrome browser, including but not limited to Windows, macOS, and Linux. Simply install it as an extension to your Chrome browser."
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
-      answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
-    },
-    {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
-    },
-  ],
+      "question": "Why am I not seeing all results when I search across large regions?",
+      "answer": "To optimize search efficiency and accuracy, it's recommended to focus on smaller areas, particularly for extensive regions. Instead of searching for 'California restaurants', narrow it down to 'Los Angeles restaurants' or specific ZIP codes to get more precise results."
+    }, {
+      "question": "Can this tool extract data from maps other than Google Maps?",
+      "answer": "While our tool is currently specialized for Google Maps data extraction, we acknowledge the diverse needs of our users. Should you require scraping services for other map sources, we are equipped to develop customized solutions upon request."
+    },],
   [
+
     {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
+      "question": "What distinguishes the free version from the paid version of the tool?",
+      "answer": "The free version of our tool provides a glimpse into the efficient scraping capabilities, allowing up to 15 listings per search. On the other hand, the paid version offers unlimited records, advanced functionalities, and supports automatic batch extraction, providing a comprehensive and streamlined experience."
     },
     {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
-    },
-  ],
+      "question": "How can I cancel my subscription?",
+      "answer": "To cancel your subscription, simply go to the settings menu within the extractor app and select 'Manage Subscription'. If you prefer, you can also reach out to our customer support via email with a request to cancel your subscription, and we'll assist you promptly."
+    }]
 ]
 
 export function Faqs() {
@@ -81,8 +58,7 @@ export function Faqs() {
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+            Have a different question about Map Lead Scraper and can’t find the answer you’re looking for? Reach out to our support team by <a href="mailto:freemapsscraper@gmail.com" className="text-indigo-600"> sending us an email</a> and we’ll get back to you as soon as we can.
           </p>
         </div>
         <ul

@@ -134,45 +134,42 @@ export function Pricing() {
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
-            href="/register"
+            name="Free"
+            price="$0"
+            description="Monthly leads export 1,000 and Export 15 records at a time."
+            href="/"
             features={[
-              'Send 10 quotes and invoices',
-              'Connect up to 2 bank accounts',
-              'Track up to 15 expenses per month',
-              'Manual payroll support',
-              'Export up to 3 reports',
+              'Custom export settings',
+              'Extract basic information',
+              'Extract phone numbers',
+              'Extract Website、Cid and Place Id',
             ]}
           />
           <Plan
             featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
-            href="/register"
+            name="Pro(Yearly)"
+            price="$9.9"
+            description="Monthly leads export 100,000 and Export Unlimited records at a time."
+            href="/"
             features={[
-              'Send 25 quotes and invoices',
-              'Connect up to 5 bank accounts',
-              'Track up to 50 expenses per month',
-              'Automated payroll support',
-              'Export up to 12 reports',
-              'Bulk reconcile transactions',
-              'Track in multiple currencies',
+              'Everything in Free plus:',
+              'Extract emails',
+              'Extract social medias',
+              'Extract Kgmid, Plus code, etc',
+              'Automatic bulk extract (coming soon)',
             ]}
           />
           <Plan
-            name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
-            href="/register"
+            name="Pro(Monthly)"
+            price="$19.9"
+            description="Monthly leads export 100,000 and Export Unlimited records at a time."
+            href="/"
             features={[
-              'Send unlimited quotes and invoices',
-              'Connect up to 15 bank accounts',
-              'Track up to 200 expenses per month',
-              'Automated payroll support',
-              'Export up to 25 reports, including TPS',
+              'Everything in Free plus:',
+              'Extract emails',
+              'Extract social medias',
+              'Extract Kgmid, Plus code, etc',
+              'Automatic bulk extract (coming soon)',
             ]}
           />
         </div>

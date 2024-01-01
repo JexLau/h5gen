@@ -27,10 +27,10 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-      Freemapsscraper offers a seamless experience in scraping map data.
+      Ideal for businesses and individuals, our tool simplifies data extraction from maps, providing access to essential information like phone number, email address and social media profiles, and more.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="/register">Get Free</Button>
+        <Button href="#">Get Free Start</Button>
         {/* <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
