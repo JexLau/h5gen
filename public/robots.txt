@@ -1,0 +1,5 @@
+# *
+User-agent: *
+
+# Sitemaps
+Sitemap: https://www.freemapsscraper.com/sitemap.xml
