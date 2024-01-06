@@ -2,18 +2,18 @@ import Image from 'next/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-// import logoLaravel from '@/images/logos/laravel.svg'
-// import logoMirage from '@/images/logos/mirage.svg'
-// import logoStatamic from '@/images/logos/statamic.svg'
-// import logoStaticKit from '@/images/logos/statickit.svg'
-// import logoTransistor from '@/images/logos/transistor.svg'
-// import logoTuple from '@/images/logos/tuple.svg'
+import mapplace from '@/images/mapplace.svg'
+import mail from '@/images/mail.svg'
+import phone from '@/images/phone.svg'
+import social from '@/images/social.svg'
+import domain from '@/images/domain.svg'
+import review from '@/images/review.svg'
 
 export function Hero() {
   return (
-    <Container className="pb-16 pt-20 text-center lg:pt-32">
+    <Container className="pb-16 pt-10 text-center lg:pt-20">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-      Efficient and User-Friendly{' '}
+        Easy to Use
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -27,10 +27,33 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-      Ideal for businesses and individuals, our tool simplifies data extraction from maps, providing access to essential information like phone number, email address and social media profiles, and more.
+        A Free scraping tool for business leads, fast and efficient scraper and extractor for Google Maps.
+      </p>
+      <p className="mx-auto mt-2 max-w-2xl text-lg tracking-tight text-slate-700">
+        Easy to Use data scraping from maps, export to csv file includes phone number, email address and social media, local data and more.
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button href="#">Get Free Start</Button>
+        {/* <Button href="/#" color="blue">
+          Free To Try
+        </Button> */}
+        {/* <button className="bg-blue-600 hover:bg-blue-700   rounded shadow-lg hover:shadow-xl ">
+          
+        </button> */}
+        <button
+          className="
+          relative py-3 px-8 text-white font-bold rounded-full transition duration-150 ease-in-out 
+          bg-[conic-gradient(from_var(--shimmer-angle),theme(colors.blue.700)_0%,theme(colors.blue.300)_10%,theme(colors.blue.700)_20%)] 
+          animate-[shimmer_2.5s_linear_infinite] 
+          after:flex after:absolute after:bg-blue-700 after:inset-[2px] after:rounded-[22px] after:content-[attr(aria-label)]
+          after:items-center after:justify-center
+        "
+          aria-label="Free To Try"
+        >
+          {/* <span><svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#4285F4" d="M14.9 8.161c0-.476-.039-.954-.121-1.422h-6.64v2.695h3.802a3.24 3.24 0 01-1.407 2.127v1.75h2.269c1.332-1.22 2.097-3.02 2.097-5.15z"/><path fill="#34A853" d="M8.14 15c1.898 0 3.499-.62 4.665-1.69l-2.268-1.749c-.631.427-1.446.669-2.395.669-1.836 0-3.393-1.232-3.952-2.888H1.85v1.803A7.044 7.044 0 008.14 15z"/><path fill="#FBBC04" d="M4.187 9.342a4.17 4.17 0 010-2.68V4.859H1.849a6.97 6.97 0 000 6.286l2.338-1.803z"/><path fill="#EA4335" d="M8.14 3.77a3.837 3.837 0 012.7 1.05l2.01-1.999a6.786 6.786 0 00-4.71-1.82 7.042 7.042 0 00-6.29 3.858L4.186 6.66c.556-1.658 2.116-2.89 3.952-2.89z"/></svg></span> */}
+          <span className="opacity-0">Free To Try</span>
+        </button>
+
+
         {/* <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
@@ -44,9 +67,9 @@ export function Hero() {
           <span className="ml-3">Watch video</span>
         </Button> */}
       </div>
-      {/* <div className="mt-36 lg:mt-44">
+      <div className="mt-28 lg:mt-32">
         <p className="font-display text-base text-slate-900">
-          Trusted by these six companies so far
+          We have 5000+ happy customers and have extracted
         </p>
         <ul
           role="list"
@@ -54,14 +77,14 @@ export function Hero() {
         >
           {[
             [
-              { name: 'Transistor', logo: logoTransistor },
-              { name: 'Tuple', logo: logoTuple },
-              { name: 'StaticKit', logo: logoStaticKit },
+              { name: '14M+ Domains', logo: domain },
+              { name: '14M+ Places', logo: mapplace },
+              { name: '6M+ Social Medias', logo: social },
             ],
             [
-              { name: 'Mirage', logo: logoMirage },
-              { name: 'Laravel', logo: logoLaravel },
-              { name: 'Statamic', logo: logoStatamic },
+              { name: '2M+ Emails', logo: mail },
+              { name: '1M+ Reviews', logo: review },
+              { name: '10M+ Phone Numbers', logo: phone },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
@@ -70,15 +93,16 @@ export function Hero() {
                 className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0"
               >
                 {group.map((company) => (
-                  <li key={company.name} className="flex">
-                    <Image src={company.logo} alt={company.name} unoptimized />
+                  <li key={company.name} className="flex items-center gap-x-2">
+                    <Image src={company.logo} alt={company.name} unoptimized width={48} height={48} />
+                    <span className='text-slate-500 text-lg'>{company.name}</span>
                   </li>
                 ))}
               </ul>
             </li>
           ))}
         </ul>
-      </div> */}
+      </div>
     </Container>
   )
 }

@@ -7,10 +7,10 @@ import { type Metadata } from 'next'
 export const metadata: Metadata = {
   title: {
     template: '%s | freemapsscraper',
-    default: 'Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!',
+    default: 'Your Go-To Tool for Easy Maps Data Extraction',
   },
   description:
-    'Your Go-To Tool for Easy Maps Data Extraction',
+    'Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!',
 }
 
 const inter = Inter({

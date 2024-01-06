@@ -7,36 +7,41 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+
+import screenshotApp from '@/images/screenshots/project-app-screenshot.png'
+import screenshotData from '@/images/screenshots/data-csv-file-page.png'
+import screenshotResults from '@/images/screenshots/export-your-results.png'
+
+// import screenshotExpenses from '@/images/screenshots/expenses.png'
+// import screenshotPayroll from '@/images/screenshots/payroll.png'
+// // import screenshotReporting from '@/images/screenshots/reporting.png'
+// import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Get Leads with Our Free Google Maps Scraper',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll,
+      "Your simple choice for navigating Google Maps for business info. Find everything you need, from phone numbers to social media details, and download it all in CSV file.",
+    image: screenshotData,
   },
   {
-    title: 'Claim expenses',
+    title: 'Easy to Extract Business Locations and Contacts',
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: screenshotExpenses,
+      "Make your marketing smoother with our easy-to-use freemapsscraper. Scraping location info and contact details, and boost your lead gathering to the next level.",
+    image: screenshotResults,
   },
   {
-    title: 'VAT handling',
+    title: 'Boots Your Sales with Accurate Local Business Data',
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
+      "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers.",
+    image: screenshotApp,
   },
-  {
-    title: 'Reporting',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
-  },
+  // {
+  //   title: 'Reporting',
+  //   description:
+  //     'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+  //   image: screenshotReporting,
+  // },
 ]
 
 export function PrimaryFeatures() {
@@ -76,11 +81,13 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+          With Easy Google Maps Data Scraper for Accurate Business Leads
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Well everything you need if you aren’t that picky about minor
-            details like tax compliance.
+          Enhance your lead generation strategy with our Google Maps Scraper with a single click. 
+          </p>
+          <p className="mt-2 text-lg tracking-tight text-blue-100">
+          With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.
           </p>
         </div>
         <Tab.Group
