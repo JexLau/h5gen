@@ -11,6 +11,7 @@ import backgroundImage from '@/images/background-features.jpg'
 import screenshotApp from '@/images/screenshots/project-app-screenshot.png'
 import screenshotData from '@/images/screenshots/data-csv-file-page.png'
 import screenshotResults from '@/images/screenshots/export-your-results.png'
+import { FreeToTry } from './DownloadBtn'
 
 // import screenshotExpenses from '@/images/screenshots/expenses.png'
 // import screenshotPayroll from '@/images/screenshots/payroll.png'
@@ -81,13 +82,13 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-          With Easy Google Maps Data Scraper for Accurate Business Leads
+            With Easy Google Maps Data Scraper for Accurate Business Leads
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-          Enhance your lead generation strategy with our Google Maps Scraper with a single click. 
+            Enhance your lead generation strategy with our Google Maps Scraper with a single click.
           </p>
           <p className="mt-2 text-lg tracking-tight text-blue-100">
-          With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.
+            With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.
           </p>
         </div>
         <Tab.Group
@@ -161,6 +162,9 @@ export function PrimaryFeatures() {
           )}
         </Tab.Group>
       </Container>
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+        <FreeToTry />
+      </div>
     </section>
   )
 }

@@ -1,12 +1,13 @@
 import { Container } from "./Container";
 import { MapIcon, ArrowDownLeftIcon,  ExclamationCircleIcon, ArrowDownIcon, FolderOpenIcon} from '@heroicons/react/24/outline';
+import { FreeToTry } from "./DownloadBtn";
 
 export const HowToWorkSection = () => {
   return (
     <section
       id="howtowork"
       aria-label="How to Use Free Maps Scraper Chrome Extension"
-      className="bg-white py-20 sm:py-24"
+      className="bg-white py-20 sm:py-24 relative"
     >
       <Container>
         <div className="mx-auto max-w-4xl">
@@ -39,6 +40,9 @@ export const HowToWorkSection = () => {
           </div>
         </div>
       </Container>
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+        <FreeToTry />
+      </div>
     </section>
   );
 }

@@ -15,7 +15,7 @@ export function SlimLayout({ children }: { children: React.ReactNode }) {
           <Image
             className="absolute inset-0 h-full w-full object-cover"
             src={backgroundImage}
-            alt=""
+            alt="background image"
             unoptimized
           />
         </div>

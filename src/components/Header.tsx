@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { FreeToTry } from './DownloadBtn'
 
 function MobileNavLink({
   href,
@@ -51,7 +51,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
   )
 }
 
-function MobileNavigation() {
+function MobileNavigation({ downloadText }: { downloadText?: string}) {
   return (
     <Popover>
       <Popover.Button
@@ -88,9 +88,9 @@ function MobileNavigation() {
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#datafields">Datafields</MobileNavLink>
             <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-              <MobileNavLink href="#faq">FAQs</MobileNavLink>
+            <MobileNavLink href="#faq">FAQs</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            {/* <MobileNavLink href="/login">Sign in</MobileNavLink> */}
+            <FreeToTry text={downloadText} />
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>
@@ -98,9 +98,9 @@ function MobileNavigation() {
   )
 }
 
-export function Header() {
+export function Header({ downloadText }: { downloadText?: string}) {
   return (
-    <header className="py-10">
+    <header className="py-8 fixed top-0 z-50 bg-white shadow-sm w-full">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
@@ -115,14 +115,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <div className="hidden md:block">
-              {/* <NavLink href="/login">Sign in</NavLink> */}
-            </div>
-            {/* <Button href="/register" color="blue">
-              <span>
-                Get started <span className="hidden lg:inline">today</span>
-              </span>
-            </Button> */}
+            <FreeToTry text={downloadText} />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
