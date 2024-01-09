@@ -7,7 +7,7 @@ import { FreeToTry } from "../DownloadBtn";
 import { MobileNavigation } from "./MobileNavigation";
 import { useTranslations } from "next-intl";
 
-export function Header({ downloadText }: { downloadText?: string }) {
+export function Header({ downloadText, href }: { downloadText?: string, href?: string }) {
   const t = useTranslations("Common")
   const nav = [{
     title: t("Features"),
@@ -40,7 +40,7 @@ export function Header({ downloadText }: { downloadText?: string }) {
             <LocaleSwitcher />
             {/* 移动端隐藏 */}
             <div className="hidden md:block">
-              <FreeToTry text={downloadText} />
+              <FreeToTry text={downloadText} isDownload={!!href} href={href} />
             </div>
             <div className="-mr-1 md:hidden">
               <MobileNavigation nav={nav}>

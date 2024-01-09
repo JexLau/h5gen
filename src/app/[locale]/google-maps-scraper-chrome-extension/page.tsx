@@ -16,7 +16,7 @@ const DownloadPage = () => {
   const t = useTranslations('DownloadPage')
   return (
     <>
-      <Header downloadText={"Download now"} />
+      <Header downloadText={t("Download now") + " 2.2.5"} href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
       <main>
         <section
           aria-label="Download the Free Maps Scraper Chrome Extension"
@@ -56,7 +56,7 @@ const DownloadPage = () => {
                 <p>{t("Note2")}</p>
 
                 <div className="text-center">
-                  <FreeToTry text={t("Download now")+"(2.2.5)"} href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
+                  <FreeToTry text={t("Download now")+" (2.2.5)"} isDownload href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
                 </div>
 
                 <h2 className="text-2xl my-6 font-semibold text-gray-900">{t("Feedback")}</h2>
