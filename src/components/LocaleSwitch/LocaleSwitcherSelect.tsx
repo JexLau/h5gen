@@ -1,6 +1,5 @@
 'use client';
-import clsx from 'clsx';
-import { ChangeEventHandler, PropsWithChildren, useTransition } from 'react';
+import { PropsWithChildren, useTransition } from 'react';
 import { useRouter, usePathname, } from './navigation';
 
 interface LocaleSwitcherSelectProps extends PropsWithChildren {

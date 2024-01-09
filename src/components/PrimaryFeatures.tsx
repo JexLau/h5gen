@@ -13,11 +13,6 @@ import screenshotData from '@/images/screenshots/data-csv-file-page.png'
 import screenshotResults from '@/images/screenshots/export-your-results.png'
 import { FreeToTry } from './DownloadBtn'
 
-// import screenshotExpenses from '@/images/screenshots/expenses.png'
-// import screenshotPayroll from '@/images/screenshots/payroll.png'
-// // import screenshotReporting from '@/images/screenshots/reporting.png'
-// import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
-
 const features = [
   {
     title: 'Get Leads with Our Free Google Maps Scraper',
@@ -37,12 +32,6 @@ const features = [
       "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers.",
     image: screenshotApp,
   },
-  // {
-  //   title: 'Reporting',
-  //   description:
-  //     'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-  //   image: screenshotReporting,
-  // },
 ]
 
 export function PrimaryFeatures() {

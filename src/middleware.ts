@@ -1,16 +1,19 @@
 import createMiddleware from 'next-intl/middleware';
+import { Locales, DefaultLocale, LocalePrefix, LocalePathnames } from './components/LocaleSwitch/navigation';
 
- 
+
+
 export default createMiddleware({
   // A list of all locales that are supported
-  locales: ['en', 'ja'],
+  locales: Locales,
  
   // Used when no locale matches
-  defaultLocale: 'en',
-  localePrefix: 'as-needed'
+  defaultLocale: DefaultLocale,
+  localePrefix: LocalePrefix,
+  pathnames: LocalePathnames,
 });
  
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(ja|en)/:path*']
+  matcher: ['/', '/(ja|en|es|ko|de|fr|pt|ru)/:path*']
 };
