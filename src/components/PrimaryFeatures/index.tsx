@@ -21,7 +21,7 @@ export function PrimaryFeatures() {
     },
     {
       title: t("Boots Your Sales with Accurate Local Business Data"),
-      description:t("freemapsscraper boosts your sales with fres"),
+      description:t("freemapsscraper boosts your sales with fresh"),
       image: screenshotApp,
     },
   ]
@@ -36,7 +36,7 @@ export function PrimaryFeatures() {
             {t("Enhance your lead generation strategy with our Google Maps Scraper with a single click")}
           </p>
           <p className="mt-2 text-lg tracking-tight text-blue-100">
-            {t("With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.)")}
+            {t("With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts")}
           </p>
         </div>
     </FeatureClient>
