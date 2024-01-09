@@ -1,5 +1,5 @@
 'use client'
-import { Fragment } from 'react'
+import { Fragment, PropsWithChildren } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
@@ -45,8 +45,11 @@ function MobileNavIcon({ open }: { open: boolean }) {
   )
 }
 
+interface MobileNavigationProps extends PropsWithChildren {
+  nav: { title: string, href: string }[]
+}
 
-export function MobileNavigation({ nav }: { nav: { title: string, href: string }[] }) {
+export function MobileNavigation({ nav }: MobileNavigationProps) {
   return (
     <Popover>
       <Popover.Button
