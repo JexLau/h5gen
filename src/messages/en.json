@@ -1,4 +1,5 @@
 {
+  "Free To Try": "Free To Try",
   "Index": {
     "title": "Google Maps Scraper: Free & Easy to Use - Free Maps Scraper",
     "description": "Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!"
@@ -34,6 +35,16 @@
     "Boots Your Sales with Accurate Local Business Data": "Boots Your Sales with Accurate Local Business Data",
     "freemapsscraper boosts your sales with fresh": "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers."
   },
+  "HowToWorkSection": {
+    "How to Use Free Maps Scraper Chrome Extension": "How to Use Free Maps Scraper Chrome Extension",
+    "Search on Google Maps": "Search on Google Maps",
+    "Start by pinpointing the exact business locations": "Start by pinpointing the exact business locations you're interested in with our search feature. Type in relevant keywords, and our Free Maps Scraper will comb through Google Maps to find every potential lead. ",
+    "Open The Chrome Extension":"Open The Chrome Extension",
+    "Navigate to the area of interest on Google Maps": "Navigate to the area of interest on Google Maps, then activate the freemapsscraper Chrome extension with a single click. It's that simple—no complex setup or configuration needed. Just a few seconds and you're on your way to compiling a robust database of leads.",
+    "Export Your Results": "Export Your Results",
+    "Once the scraping is complete": "Once the scraping is complete, you can export the data into a CSV or XLS file for easy analysis and integration. With support for an unlimited number of exports, freemapsscraper ensures that you have continuous access to the latest data. The export includes essential information like phone numbers, email addresses, exact locations, and social media profiles—everything you need to connect with your targeted audience effectively.",
+    "Free To Try": "Free To Try"
+  },
   "LinkDownload": {
     "Add to Chrome": "Add to Chrome(it's free)"
   },
@@ -67,19 +78,6 @@
     "Market Research Desc": "Pulls competitor information, analyzes industry trends, monitors online reputation, and provides other market insights.",
     "Data Automation": "Data Automation",
     "Data Automation Desc": "Scrapes large amounts of listing data from {type} Maps with one click and exports to spreadsheet for analysis. Saves time vs manual copying."
-  },
-  "HowToWorkSection": {
-    "h2": "How to use Map Lead Scraper Chrome Extension",
-    "Search On Google Maps": "Search On Google Maps",
-    "desc1": "Enter keywords to locate local businesses in a location",
-    "desc2": "Work from any location, from regional to community",
-    "Get Started for Free": "Get Started for Free",
-    "Open The Chrome Extension": "Open The Chrome Extension",
-    "Very easy to start your crawl": "Very easy to start your crawl",
-    "Just a few seconds to complete": "Just a few seconds to complete",
-    "Export Your Results": "Export Your Results",
-    "Support for CSV / XLS files and unlimited export": "Support for CSV / XLS files and unlimited export",
-    "Support for emails and numbers, etc": "Support for emails and numbers, etc"
   },
   "DataFieldSection": {
     "h2": "What Types of Data can be extracted with G Map Lead Scraper",
