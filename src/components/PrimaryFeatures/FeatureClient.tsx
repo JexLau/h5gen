@@ -1,40 +1,18 @@
 'use client'
-
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
+import { PropsWithChildren, useEffect, useState } from 'react'
+import Image, { StaticImageData } from 'next/image'
 import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
+import { FreeToTry } from '../DownloadBtn'
 
-import screenshotApp from '@/images/screenshots/project-app-screenshot.png'
-import screenshotData from '@/images/screenshots/data-csv-file-page.png'
-import screenshotResults from '@/images/screenshots/export-your-results.png'
-import { FreeToTry } from './DownloadBtn'
+interface PrimaryFeaturesProps extends PropsWithChildren {
+  features: Array<{ title: string; description: string; image: StaticImageData }>
+} 
 
-const features = [
-  {
-    title: 'Get Leads with Our Free Google Maps Scraper',
-    description:
-      "Your simple choice for navigating Google Maps for business info. Find everything you need, from phone numbers to social media details, and download it all in CSV file.",
-    image: screenshotData,
-  },
-  {
-    title: 'Easy to Extract Business Locations and Contacts',
-    description:
-      "Make your marketing smoother with our easy-to-use freemapsscraper. Scraping location info and contact details, and boost your lead gathering to the next level.",
-    image: screenshotResults,
-  },
-  {
-    title: 'Boots Your Sales with Accurate Local Business Data',
-    description:
-      "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers.",
-    image: screenshotApp,
-  },
-]
-
-export function PrimaryFeatures() {
+export function FeatureClient({children, features}: PrimaryFeaturesProps) {
   let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
     'horizontal',
   )
@@ -69,17 +47,7 @@ export function PrimaryFeatures() {
         unoptimized
       />
       <Container className="relative">
-        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            With Easy Google Maps Data Scraper for Accurate Business Leads
-          </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
-            Enhance your lead generation strategy with our Google Maps Scraper with a single click.
-          </p>
-          <p className="mt-2 text-lg tracking-tight text-blue-100">
-            With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.
-          </p>
-        </div>
+        {children}
         <Tab.Group
           as="div"
           className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"

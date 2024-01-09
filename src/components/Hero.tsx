@@ -9,12 +9,14 @@ import social from '@/images/social.svg'
 import domain from '@/images/domain.svg'
 import review from '@/images/review.svg'
 import { FreeToTry } from './DownloadBtn'
+import { useTranslations } from 'next-intl'
 
 export function Hero() {
+  const t = useTranslations('Hero')
   return (
     <Container className="pb-16 pt-10 text-center lg:pt-20 mt-24">
       <h1 className="mx-auto max-w-4xl font-display text-4xl md:text-7xl font-medium tracking-tight text-slate-900 overflow-hidden">
-        Easy to Use
+        {t('Easy to Use')}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -28,10 +30,10 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        This scraping tool is perfect for businesses, providing a fast and efficient way to extract Google Maps data.
+        {t('This scraping tool is perfect for businesses')}
       </p>
       <p className="mx-auto mt-2 max-w-2xl text-lg tracking-tight text-slate-700">
-        With its easy-to-use interface, you can easily extract phone numbers, email addresses, social media accounts, local data, and much more, all of which can be exported to a csv file for convenient management.
+       {t('With its easy-to-use interface')}
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <FreeToTry />
@@ -50,7 +52,7 @@ export function Hero() {
       </div>
       <div className="mt-28 lg:mt-32">
         <p className="font-display text-base text-slate-900">
-          We have 5000+ happy customers and have extracted
+          {t('We have 5000+ happy customers and have extracted')}
         </p>
         <ul
           role="list"

@@ -1,7 +1,7 @@
 {
   "Index": {
-    "title": "Free Google Maps Scraper Extension Online -  Map Lead Scraper",
-    "description": "Scrape local business data from Google Maps to csv file with our GMap Leads Scraper/Generator, includes leads, reviews, phone number, email address and more."
+    "title": "Google Maps Scraper: Free & Easy to Use - Free Maps Scraper",
+    "description": "Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!"
   },
   "Download": {
     "title": "Google Maps Scraper Chrome Extension: Free Download",
@@ -17,13 +17,22 @@
     "label": "Change language",
     "locale": "{locale, select, ja {日本語} en {English} es {Español} ko {한국어} de {Deutsch} other {English}}"
   },
-  "FirstSection": {
-    "h1": "Google Maps Data Scraper",
-    "desc1": "Map Lead Scraper is a Google Maps scraping tool that helps users to grab and extract information from Google Maps.",
-    "desc2": "Map Lead Scraper extracts local business data and contacts saving hours of manual searches. Best way to automatically generate leads from Google Maps listings.",
-    "bh1": "Bing Maps Scraper",
-    "bdesc1": "Bing Maps Scraper is a powerful tool that allows you to extract valuable data from Bing Maps.",
-    "bdesc2": "It eliminates the need for manual copy-pasting and saves time and effort. With Bing Maps Scraper, you can easily extract information such as contact details, addresses, categories, and more."
+  "Hero": {
+    "Easy to Use": "Easy to Use",
+    "This scraping tool is perfect for businesses": "This scraping tool is perfect for businesses, providing a fast and efficient way to extract Google Maps data.",
+    "With its easy-to-use interface": "With its easy-to-use interface, you can easily extract phone numbers, email addresses, social media accounts, local data, and much more, all of which can be exported to a csv file for convenient management.",
+    "We have 5000+ happy customers and have extracted": "We have 5000+ happy customers and have extracted"
+  },
+  "PrimaryFeatures": {
+    "With Easy Google Maps Data Scraper for Accurate Business Leads": "With Easy Google Maps Data Scraper for Accurate Business Leads",
+    "Enhance your lead generation strategy with our Google Maps Scraper with a single click": "Enhance your lead generation strategy with our Google Maps Scraper with a single click.",
+    "With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts": "With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.",
+    "Get Leads with Our Free Google Maps Scraper": "Get Leads with Our Free Google Maps Scraper",
+    "Your simple choice for navigating Google Maps for business info": "Your simple choice for navigating Google Maps for business info. Find everything you need, from phone numbers to social media details, and download it all in CSV file.",
+    "Easy to Extract Business Locations and Contacts": "Easy to Extract Business Locations and Contacts",
+    "Make your marketing smoother with our easy-to-use freemapsscraper": "Make your marketing smoother with our easy-to-use freemapsscraper. Scraping location info and contact details, and boost your lead gathering to the next level.",
+    "Boots Your Sales with Accurate Local Business Data": "Boots Your Sales with Accurate Local Business Data",
+    "freemapsscraper boosts your sales with fresh": "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers."
   },
   "LinkDownload": {
     "Add to Chrome": "Add to Chrome(it's free)"
