@@ -125,18 +125,18 @@ export function Pricing() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">{t("Simple pricing for everyone")}</span>
+              <span className="relative">{t("h2")}</span>
             </span>
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            {t("our software will work well for you")}
+            {t("d1")}
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Free"
             price="$0"
-            description={t("Monthly leads export 1,000 and Export 15 records at a time")}
+            description={t("fd")}
             href="/"
             features={[
               t('Custom export settings'),
@@ -149,7 +149,7 @@ export function Pricing() {
             featured
             name="Pro(Yearly)"
             price="$9.9"
-            description={t("Monthly leads export 100,000 and Export Unlimited records at a time")}
+            description={t("pd")}
             href="/"
             features={[
               t('Everything in Free plus'),
@@ -162,7 +162,7 @@ export function Pricing() {
           <Plan
             name="Pro(Monthly)"
             price="$19.9"
-            description={t("Monthly leads export 100,000 and Export Unlimited records at a time")}
+            description={t("pd")}
             href="/"
             features={[
               t('Everything in Free plus'),

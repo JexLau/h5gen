@@ -8,20 +8,20 @@ export function PrimaryFeatures() {
   const t = useTranslations('PrimaryFeatures')
   const features = [
     {
-      title: t('Get Leads with Our Free Google Maps Scraper'),
+      title: t('t3'),
       description:
-        t("Your simple choice for navigating Google Maps for business info"),
+        t("t4"),
       image: screenshotData,
     },
     {
-      title: t('Easy to Extract Business Locations and Contacts'),
+      title: t('t5'),
       description:
-        t("Make your marketing smoother with our easy-to-use freemapsscraper"),
+        t("t6"),
       image: screenshotResults,
     },
     {
-      title: t("Boots Your Sales with Accurate Local Business Data"),
-      description:t("freemapsscraper boosts your sales with fresh"),
+      title: t("t7"),
+      description:t("t8"),
       image: screenshotApp,
     },
   ]
@@ -30,13 +30,13 @@ export function PrimaryFeatures() {
     <FeatureClient features={features}>
       <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            {t("With Easy Google Maps Data Scraper for Accurate Business Leads")}
+            {t("h2")}
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
-            {t("Enhance your lead generation strategy with our Google Maps Scraper with a single click")}
+            {t("t1")}
           </p>
           <p className="mt-2 text-lg tracking-tight text-blue-100">
-            {t("With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts")}
+            {t("t2")}
           </p>
         </div>
     </FeatureClient>

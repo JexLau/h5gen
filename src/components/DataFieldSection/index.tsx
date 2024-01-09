@@ -41,10 +41,10 @@ export const DataFieldSection = () => {
     <Container>
       <div className="mx-auto max-w-2xl md:text-center">
         <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-          {t("What Data Can You Scrape Using Free Maps Scraper")}
+          {t("h2")}
         </h2>
         <p className="mt-4 text-lg tracking-tight text-slate-700">
-          {t("The following table lists all supported data fields")}
+          {t("d1")}
         </p>
       </div>
       <DataFieldClient dataFields={dataFields} />

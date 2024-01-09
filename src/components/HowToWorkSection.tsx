@@ -10,37 +10,37 @@ export const HowToWorkSection = () => {
   return (
     <section
       id="howtowork"
-      aria-label={t("How to Use Free Maps Scraper Chrome Extension")}
+      aria-label={t("h2")}
       className="bg-white py-20 sm:py-24 relative"
     >
       <Container>
         <div className="mx-auto max-w-4xl">
         <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            {t("How to Use Free Maps Scraper Chrome Extension")}
+            {t("h2")}
           </h2>
           <div className="mt-12">
             <div className="mb-10">
               <h3 className="text-2xl font-semibold text-gray-900 flex items-center"><MapIcon className="h-8 w-8 mr-2 text-blue-600" />
-              {t("Search on Google Maps")}
+              {t("t1")}
               </h3>
               <p className="mt-2 text-lg text-gray-600">
-              {t("Start by pinpointing the exact business locations")}
+              {t("t11")}
               </p>
             </div>
 
             <div className="mb-10">
               
-              <h3 className="text-2xl font-semibold text-gray-900 flex items-center"><FolderOpenIcon className="h-8 w-8 mr-2 text-blue-600" />{t("Open The Chrome Extension")}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 flex items-center"><FolderOpenIcon className="h-8 w-8 mr-2 text-blue-600" />{t("t2")}</h3>
               <p className="mt-2 text-lg text-gray-600">
-              {t("Navigate to the area of interest on Google Maps")}
+              {t("t21")}
               </p>
             </div>
 
             <div>
               
-              <h3 className="text-2xl font-semibold text-gray-900 flex items-center"><ArrowDownIcon className="h-8 w-8 mr-2 text-blue-600" />{t("Export Your Results")}</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 flex items-center"><ArrowDownIcon className="h-8 w-8 mr-2 text-blue-600" />{t("t3")}</h3>
               <p className="mt-2 text-lg text-gray-600">
-                {t("Once the scraping is complete")}
+                {t("t31")}
               </p>
             </div>
           </div>

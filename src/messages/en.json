@@ -19,34 +19,34 @@
     "locale": "{locale, select, ja {日本語} en {English} es {Español} ko {한국어} de {Deutsch} fr {Français} pt {Português} ru {Русский} other {English}}"
   },
   "Hero": {
-    "Easy to Use": "Easy to Use",
-    "This scraping tool is perfect for businesses": "This scraping tool is perfect for businesses, providing a fast and efficient way to extract Google Maps data.",
-    "With its easy-to-use interface": "With its easy-to-use interface, you can easily extract phone numbers, email addresses, social media accounts, local data, and much more, all of which can be exported to a csv file for convenient management.",
-    "We have 5000+ happy customers and have extracted": "We have 5000+ happy customers and have extracted"
+    "Easy": "Easy to Use",
+    "text1": "This scraping tool is perfect for businesses, providing a fast and efficient way to extract Google Maps data.",
+    "text2": "With its easy-to-use interface, you can easily extract phone numbers, email addresses, social media accounts, local data, and much more, all of which can be exported to a csv file for convenient management.",
+    "text3": "We have 5000+ happy customers and have extracted"
   },
   "PrimaryFeatures": {
-    "With Easy Google Maps Data Scraper for Accurate Business Leads": "With Easy Google Maps Data Scraper for Accurate Business Leads",
-    "Enhance your lead generation strategy with our Google Maps Scraper with a single click": "Enhance your lead generation strategy with our Google Maps Scraper with a single click.",
-    "With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts": "With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.",
-    "Get Leads with Our Free Google Maps Scraper": "Get Leads with Our Free Google Maps Scraper",
-    "Your simple choice for navigating Google Maps for business info": "Your simple choice for navigating Google Maps for business info. Find everything you need, from phone numbers to social media details, and download it all in CSV file.",
-    "Easy to Extract Business Locations and Contacts": "Easy to Extract Business Locations and Contacts",
-    "Make your marketing smoother with our easy-to-use freemapsscraper": "Make your marketing smoother with our easy-to-use freemapsscraper. Scraping location info and contact details, and boost your lead gathering to the next level.",
-    "Boots Your Sales with Accurate Local Business Data": "Boots Your Sales with Accurate Local Business Data",
-    "freemapsscraper boosts your sales with fresh": "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers."
+    "h2": "With Easy Google Maps Data Scraper for Accurate Business Leads",
+    "t1": "Enhance your lead generation strategy with our Google Maps Scraper with a single click.",
+    "t2": "With our efficient scraping tool, tap into a wealth of local business data to power up your sales and marketing efforts.",
+    "t3": "Get Leads with Our Free Google Maps Scraper",
+    "t4": "Your simple choice for navigating Google Maps for business info. Find everything you need, from phone numbers to social media details, and download it all in CSV file.",
+    "t5": "Easy to Extract Business Locations and Contacts",
+    "t6": "Make your marketing smoother with our easy-to-use freemapsscraper. Scraping location info and contact details, and boost your lead gathering to the next level.",
+    "t7": "Boots Your Sales with Accurate Local Business Data",
+    "t8": "freemapsscraper boosts your sales with fresh, correct leads. Use the latest local business info to reach out more effectively and turn potential customers into actual buyers."
   },
   "HowToWorkSection": {
-    "How to Use Free Maps Scraper Chrome Extension": "How to Use Free Maps Scraper Chrome Extension",
-    "Search on Google Maps": "Search on Google Maps",
-    "Start by pinpointing the exact business locations": "Start by pinpointing the exact business locations you're interested in with our search feature. Type in relevant keywords, and our Free Maps Scraper will comb through Google Maps to find every potential lead. ",
-    "Open The Chrome Extension": "Open The Chrome Extension",
-    "Navigate to the area of interest on Google Maps": "Navigate to the area of interest on Google Maps, then activate the freemapsscraper Chrome extension with a single click. It's that simple—no complex setup or configuration needed. Just a few seconds and you're on your way to compiling a robust database of leads.",
-    "Export Your Results": "Export Your Results",
-    "Once the scraping is complete": "Once the scraping is complete, you can export the data into a CSV or XLS file for easy analysis and integration. With support for an unlimited number of exports, freemapsscraper ensures that you have continuous access to the latest data. The export includes essential information like phone numbers, email addresses, exact locations, and social media profiles—everything you need to connect with your targeted audience effectively."
+    "h2": "How to Use Free Maps Scraper Chrome Extension",
+    "t1": "Search on Google Maps",
+    "t11": "Start by pinpointing the exact business locations you're interested in with our search feature. Type in relevant keywords, and our Free Maps Scraper will comb through Google Maps to find every potential lead. ",
+    "t2": "Open The Chrome Extension",
+    "t21": "Navigate to the area of interest on Google Maps, then activate the freemapsscraper Chrome extension with a single click. It's that simple—no complex setup or configuration needed. Just a few seconds and you're on your way to compiling a robust database of leads.",
+    "t3": "Export Your Results",
+    "t31": "Once the scraping is complete, you can export the data into a CSV or XLS file for easy analysis and integration. With support for an unlimited number of exports, freemapsscraper ensures that you have continuous access to the latest data. The export includes essential information like phone numbers, email addresses, exact locations, and social media profiles—everything you need to connect with your targeted audience effectively."
   },
   "DataFieldSection": {
-    "What Data Can You Scrape Using Free Maps Scraper": "What Data Can You Scrape Using Free Maps Scraper",
-    "The following table lists all supported data fields": "The following table lists all supported data fields.",
+    "h2": "What Data Can You Scrape Using Free Maps Scraper",
+    "d1": "The following table lists all supported data fields.",
     "Name": "Name of the place on Google Maps, this is usually the canonicalized business name.",
     "Phone": "The place's phone number in its local format.",
     "Email address": "The place's email scraped from the internet.",
@@ -76,9 +76,10 @@
     "Kgmid": "An identifier used specifically for the Google Knowledge Graph API."
   },
   "PricingSection": {
-    "Simple pricing for everyone": "Simple pricing for everyone.",
-    "our software will work well for you": "It doesn't matter what size your business is, our software will work well for you.",
-    "Monthly leads export 1,000 and Export 15 records at a time": "Monthly leads export 1,000 Export 15 records at a time.",
+    "h2": "Simple pricing for everyone.",
+    "d1": "It doesn't matter what size your business is, our software will work well for you.",
+    "fd": "Monthly leads export 1,000 Export 15 records at a time.",
+    "pd": "Monthly leads export 100,000 and Export Unlimited records at a time.",
     "Custom export settings": "Custom export settings",
     "Extract basic information": "Extract basic information",
     "Extract phone numbers": "Extract phone numbers",
@@ -88,8 +89,7 @@
     "Extract social medias": "Extract social medias",
     "Automatic bulk extract (coming soon)": "Automatic bulk extract (coming soon)",
     "Extract Kgmid, Plus code, etc": "Extract Kgmid, Plus code, etc",
-    "Extract Website、Cid and PlaceId": "Extract Website、Cid and PlaceId",
-    "Monthly leads export 100,000 and Export Unlimited records at a time": "Monthly leads export 100,000 and Export Unlimited records at a time."
+    "Extract Website、Cid and PlaceId": "Extract Website、Cid and PlaceId"
   },
   "Testimonials": {
     "h2": "Loved by businesses worldwide.",

@@ -16,7 +16,7 @@ export function Hero() {
   return (
     <Container className="pb-16 pt-10 text-center lg:pt-20 mt-24">
       <h1 className="mx-auto max-w-4xl font-display text-4xl md:text-7xl font-medium tracking-tight text-slate-900 overflow-hidden">
-        {t('Easy to Use')}
+        {t('Easy')}
         <span className="relative whitespace-nowrap text-blue-600">
           <svg
             aria-hidden="true"
@@ -30,10 +30,10 @@ export function Hero() {
         </span>
       </h1>
       <p className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
-        {t('This scraping tool is perfect for businesses')}
+        {t('text1')}
       </p>
       <p className="mx-auto mt-2 max-w-2xl text-lg tracking-tight text-slate-700">
-       {t('With its easy-to-use interface')}
+       {t('text2')}
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
         <FreeToTry />
@@ -52,7 +52,7 @@ export function Hero() {
       </div>
       <div className="mt-28 lg:mt-32">
         <p className="font-display text-base text-slate-900">
-          {t('We have 5000+ happy customers and have extracted')}
+          {t('text3')}
         </p>
         <ul
           role="list"
