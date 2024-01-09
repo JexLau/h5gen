@@ -1,5 +1,4 @@
 'use client'
-
 import { Fragment } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
@@ -9,6 +8,7 @@ import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
 import { FreeToTry } from './DownloadBtn'
+import { LocaleSwitcher } from './LocaleSwitch'
 
 function MobileNavLink({
   href,
@@ -17,7 +17,7 @@ function MobileNavLink({
   href: string
   children: React.ReactNode
 }) {
-  return (
+return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
       {children}
     </Popover.Button>
@@ -51,7 +51,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
   )
 }
 
-function MobileNavigation({ downloadText }: { downloadText?: string}) {
+function MobileNavigation({ downloadText }: { downloadText?: string }) {
   return (
     <Popover>
       <Popover.Button
@@ -89,6 +89,7 @@ function MobileNavigation({ downloadText }: { downloadText?: string}) {
             <MobileNavLink href="#datafields">Datafields</MobileNavLink>
             <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <MobileNavLink href="#faq">FAQs</MobileNavLink>
+            <LocaleSwitcher />
             <hr className="m-2 border-slate-300/40" />
             <FreeToTry text={downloadText} />
           </Popover.Panel>
@@ -98,9 +99,9 @@ function MobileNavigation({ downloadText }: { downloadText?: string}) {
   )
 }
 
-export function Header({ downloadText }: { downloadText?: string}) {
+export function Header({ downloadText }: { downloadText?: string }) {
   return (
-    <header className="py-8 fixed top-0 z-50 bg-white shadow-sm w-full">
+    <header className="py-6 fixed top-0 z-50 bg-white shadow-sm w-full">
       <Container>
         <nav className="relative z-50 flex justify-between">
           <div className="flex items-center md:gap-x-12">
@@ -115,6 +116,7 @@ export function Header({ downloadText }: { downloadText?: string}) {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
+            <LocaleSwitcher />
             <FreeToTry text={downloadText} />
             <div className="-mr-1 md:hidden">
               <MobileNavigation />

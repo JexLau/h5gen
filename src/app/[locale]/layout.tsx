@@ -28,12 +28,15 @@ const lexend = Lexend({
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: Record<string, string>
 }) {
+  const { locale } = params
   return (
     <html
-      lang="en"
+      lang={locale}
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
         inter.variable,
