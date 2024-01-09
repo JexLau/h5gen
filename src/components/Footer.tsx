@@ -4,7 +4,7 @@ import { NavLink } from '@/components/NavLink'
 import { useTranslations } from 'next-intl'
 
 export function Footer() {
-  const t = useTranslations('Header')
+  const t = useTranslations('Common')
   return (
     <footer className="bg-slate-50">
       <Container>

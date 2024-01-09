@@ -1,22 +1,22 @@
 {
-  "Free To Try": "Free To Try",
   "Index": {
     "title": "Google Maps Scraper: Free & Easy to Use - Free Maps Scraper",
     "description": "Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!"
   },
   "Download": {
-    "title": "Google Maps Scraper Chrome Extension: Free Download",
-    "description": "Map Lead Scraper is a google maps scraper chrome extension that helps users to scrape and extract information from Google Maps. Please follow the instructions below to install and get started."
+    "title": "Download the Free Maps Scraper Chrome Extension",
+    "description": "Step into the world of effortless data extraction with the Free Maps Scraper, a Chrome extension that streamlines your lead generation process. Download our free and easy-to-use tool today and start harvesting valuable data from Google Maps."
   },
-  "Header": {
+  "Common": {
     "Features": "Features",
     "Datafields": "Datafields",
     "Pricing": "Pricing",
-    "FAQs": "FAQs"
+    "FAQs": "FAQs",
+    "Free to try": "Free to try"
   },
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, ja {日本語} en {English} es {Español} ko {한국어} de {Deutsch} other {English}}"
+    "locale": "{locale, select, ja {日本語} en {English} es {Español} ko {한국어} de {Deutsch} fr {Français} pt {Português} ru {Русский} other {English}}"
   },
   "Hero": {
     "Easy to Use": "Easy to Use",
@@ -42,8 +42,7 @@
     "Open The Chrome Extension": "Open The Chrome Extension",
     "Navigate to the area of interest on Google Maps": "Navigate to the area of interest on Google Maps, then activate the freemapsscraper Chrome extension with a single click. It's that simple—no complex setup or configuration needed. Just a few seconds and you're on your way to compiling a robust database of leads.",
     "Export Your Results": "Export Your Results",
-    "Once the scraping is complete": "Once the scraping is complete, you can export the data into a CSV or XLS file for easy analysis and integration. With support for an unlimited number of exports, freemapsscraper ensures that you have continuous access to the latest data. The export includes essential information like phone numbers, email addresses, exact locations, and social media profiles—everything you need to connect with your targeted audience effectively.",
-    "Free To Try": "Free To Try"
+    "Once the scraping is complete": "Once the scraping is complete, you can export the data into a CSV or XLS file for easy analysis and integration. With support for an unlimited number of exports, freemapsscraper ensures that you have continuous access to the latest data. The export includes essential information like phone numbers, email addresses, exact locations, and social media profiles—everything you need to connect with your targeted audience effectively."
   },
   "DataFieldSection": {
     "What Data Can You Scrape Using Free Maps Scraper": "What Data Can You Scrape Using Free Maps Scraper",
@@ -88,7 +87,9 @@
     "Extract emails": "Extract emails",
     "Extract social medias": "Extract social medias",
     "Automatic bulk extract (coming soon)": "Automatic bulk extract (coming soon)",
-    "Get Started": "Get Started"
+    "Extract Kgmid, Plus code, etc": "Extract Kgmid, Plus code, etc",
+    "Extract Website、Cid and PlaceId": "Extract Website、Cid and PlaceId",
+    "Monthly leads export 100,000 and Export Unlimited records at a time": "Monthly leads export 100,000 and Export Unlimited records at a time."
   },
   "Testimonials": {
     "h2": "Loved by businesses worldwide.",

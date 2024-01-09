@@ -136,7 +136,7 @@ export function Pricing() {
           <Plan
             name="Free"
             price="$0"
-            description={t("Monthly leads export 1,000 and Export 15 records at a time.")}
+            description={t("Monthly leads export 1,000 and Export 15 records at a time")}
             href="/"
             features={[
               t('Custom export settings'),
@@ -149,7 +149,7 @@ export function Pricing() {
             featured
             name="Pro(Yearly)"
             price="$9.9"
-            description="Monthly leads export 100,000 and Export Unlimited records at a time."
+            description={t("Monthly leads export 100,000 and Export Unlimited records at a time")}
             href="/"
             features={[
               t('Everything in Free plus'),
@@ -162,7 +162,7 @@ export function Pricing() {
           <Plan
             name="Pro(Monthly)"
             price="$19.9"
-            description="Monthly leads export 100,000 and Export Unlimited records at a time."
+            description={t("Monthly leads export 100,000 and Export Unlimited records at a time")}
             href="/"
             features={[
               t('Everything in Free plus'),
