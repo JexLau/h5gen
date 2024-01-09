@@ -11,7 +11,7 @@ function MobileNavLink({
   href: string
   children: React.ReactNode
 }) {
-return (
+  return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
       {children}
     </Popover.Button>
@@ -46,7 +46,7 @@ function MobileNavIcon({ open }: { open: boolean }) {
 }
 
 
-export function MobileNavigation() {
+export function MobileNavigation({ nav }: { nav: { title: string, href: string }[] }) {
   return (
     <Popover>
       <Popover.Button
@@ -80,10 +80,7 @@ export function MobileNavigation() {
             as="div"
             className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
-            <MobileNavLink href="#features">Features</MobileNavLink>
-            <MobileNavLink href="#datafields">Datafields</MobileNavLink>
-            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-            <MobileNavLink href="#faq">FAQs</MobileNavLink>
+            {nav.map((item) => <MobileNavLink href={item.href} key={item.title}>{item.title}</MobileNavLink>)}
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>

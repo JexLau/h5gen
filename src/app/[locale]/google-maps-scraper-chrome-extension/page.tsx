@@ -56,7 +56,7 @@ const DownloadPage = () => {
                 <p>{t("Note2")}</p>
 
                 <div className="text-center">
-                  <FreeToTry text={t("Download now")} />
+                  <FreeToTry text={t("Download now")+"(2.2.5)"} href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
                 </div>
 
                 <h2 className="text-2xl my-6 font-semibold text-gray-900">{t("Feedback")}</h2>

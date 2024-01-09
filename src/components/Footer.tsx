@@ -16,7 +16,7 @@ export function Footer() {
               <NavLink href="#datafields">{t("Datafields")}</NavLink>
               <NavLink href="#pricing">{t("Pricing")}</NavLink>
               {/* <NavLink href="#contact">Contact</NavLink> */}
-              <NavLink href="#faq">FAQs</NavLink>
+              <NavLink href="#faq">{t("FAQs")}</NavLink>
             </div>
           </nav>
         </div>
@@ -48,8 +48,7 @@ export function Footer() {
             </Link>
           </div> */}
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} FreeMapsScraper. All rights
-            reserved.
+            {t("Rights")}
           </p>
         </div>
       </Container>

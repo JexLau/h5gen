@@ -66,6 +66,7 @@ function Plan({
   features: Array<string>
   featured?: boolean
 }) {
+  const t = useTranslations("PricingSection")
   return (
     <section
       className={clsx(
@@ -106,7 +107,7 @@ function Plan({
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
       >
-        Get started
+        {t("Get started")}
       </Button>
     </section>
   )

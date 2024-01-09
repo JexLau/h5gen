@@ -8,11 +8,20 @@
     "description": "Step into the world of effortless data extraction with the Free Maps Scraper, a Chrome extension that streamlines your lead generation process. Download our free and easy-to-use tool today and start harvesting valuable data from Google Maps."
   },
   "Common": {
+    "Phone Numbers": "Phone Numbers",
+    "Emails": "Emails",
+    "Social Medias": "Social Medias",
+    "Reviews": "Reviews",
+    "Domains": "Domains",
+    "Places": "Places",
     "Features": "Features",
     "Datafields": "Datafields",
     "Pricing": "Pricing",
     "FAQs": "FAQs",
-    "Free to try": "Free to try"
+    "Free to try": "Free to try",
+    "Contact": "Contact",
+    "Legal": "Legal",
+    "Rights": "Copyright © 2023 FreeMapsScraper. All rights reserved."
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -89,7 +98,8 @@
     "Extract social medias": "Extract social medias",
     "Automatic bulk extract (coming soon)": "Automatic bulk extract (coming soon)",
     "Extract Kgmid, Plus code, etc": "Extract Kgmid, Plus code, etc",
-    "Extract Website、Cid and PlaceId": "Extract Website、Cid and PlaceId"
+    "Extract Website、Cid and PlaceId": "Extract Website、Cid and PlaceId",
+    "Get started": "Get started"
   },
   "Testimonials": {
     "h2": "Loved by businesses worldwide.",
@@ -118,18 +128,6 @@
     "a4": "The free version of our tool provides a glimpse into the efficient scraping capabilities, allowing up to 15 listings per search. On the other hand, the paid version offers unlimited records, advanced functionalities, and supports automatic batch extraction, providing a comprehensive and streamlined experience.",
     "q5": "How can I cancel my subscription?",
     "a5": "To cancel your subscription, simply go to the settings menu within the extractor app and select 'Manage Subscription'. If you prefer, you can also reach out to our customer support via email with a request to cancel your subscription, and we'll assist you promptly."
-  },
-  "Footer": {
-    "Footer": "Footer",
-    "companyName": "Map Lead Scraper",
-    "desc": "A scraping tool for business leads, one click to extract data from Maps and export to CSV file",
-    "c1": "Send us an email at",
-    "c2": "if you have any questions. We'll help you out.",
-    "Contact": "Contact",
-    "Services": "Products",
-    "Legal": "Legal",
-    "Rights": "2022-PRESENT MapLeadScraper. All rights Reserved",
-    "Bing Maps Scraper": "Bing Maps Scraper"
   },
   "DownloadPage": {
     "h1": "Download Free Maps Scraper Chrome Extension",

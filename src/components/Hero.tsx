@@ -1,6 +1,5 @@
 import Image from 'next/image'
 
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import mapplace from '@/images/mapplace.svg'
 import mail from '@/images/mail.svg'
@@ -13,6 +12,7 @@ import { useTranslations } from 'next-intl'
 
 export function Hero() {
   const t = useTranslations('Hero')
+  const ct = useTranslations('Common')
   return (
     <Container className="pb-16 pt-10 text-center lg:pt-20 mt-24">
       <h1 className="mx-auto max-w-4xl font-display text-4xl md:text-7xl font-medium tracking-tight text-slate-900 overflow-hidden">
@@ -60,14 +60,14 @@ export function Hero() {
         >
           {[
             [
-              { name: '14M+ Domains', logo: domain },
-              { name: '14M+ Places', logo: mapplace },
-              { name: '6M+ Social Medias', logo: social },
+              { name: `14M+ ${ct("Domains")}`, logo: domain },
+              { name: `14M+ ${ct("Places")}`, logo: mapplace },
+              { name: `6M+ ${ct("Social Medias")}`, logo: social },
             ],
             [
-              { name: '2M+ Emails', logo: mail },
-              { name: '1M+ Reviews', logo: review },
-              { name: '10M+ Phone Numbers', logo: phone },
+              { name: `2M+ ${ct("Emails")}`, logo: mail },
+              { name: `1M+ ${ct("Reviews")}`, logo: review },
+              { name: `10M+ ${ct("Phone Numbers")}`, logo: phone },
             ],
           ].map((group, groupIndex) => (
             <li key={groupIndex}>
