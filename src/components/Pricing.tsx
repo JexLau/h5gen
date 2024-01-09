@@ -2,6 +2,7 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import { useTranslations } from 'next-intl'
 
 function SwirlyDoodle(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -112,6 +113,7 @@ function Plan({
 }
 
 export function Pricing() {
+  const t = useTranslations("PricingSection")
   return (
     <section
       id="pricing"
@@ -123,26 +125,24 @@ export function Pricing() {
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
-            </span>{' '}
-            for everyone.
+              <span className="relative">{t("Simple pricing for everyone")}</span>
+            </span>
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software will
-            work well for you.
+            {t("our software will work well for you")}
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Free"
             price="$0"
-            description="Monthly leads export 1,000 and Export 15 records at a time."
+            description={t("Monthly leads export 1,000 and Export 15 records at a time.")}
             href="/"
             features={[
-              'Custom export settings',
-              'Extract basic information',
-              'Extract phone numbers',
-              'Extract Website、Cid and Place Id',
+              t('Custom export settings'),
+              t('Extract basic information'),
+              t('Extract phone numbers'),
+              t('Extract Website、Cid and PlaceId'),
             ]}
           />
           <Plan
@@ -152,11 +152,11 @@ export function Pricing() {
             description="Monthly leads export 100,000 and Export Unlimited records at a time."
             href="/"
             features={[
-              'Everything in Free plus:',
-              'Extract emails',
-              'Extract social medias',
-              'Extract Kgmid, Plus code, etc',
-              'Automatic bulk extract (coming soon)',
+              t('Everything in Free plus'),
+              t('Extract emails'),
+              t('Extract social medias'),
+              t('Extract Kgmid, Plus code, etc'),
+              t('Automatic bulk extract (coming soon)'),
             ]}
           />
           <Plan
@@ -165,11 +165,11 @@ export function Pricing() {
             description="Monthly leads export 100,000 and Export Unlimited records at a time."
             href="/"
             features={[
-              'Everything in Free plus:',
-              'Extract emails',
-              'Extract social medias',
-              'Extract Kgmid, Plus code, etc',
-              'Automatic bulk extract (coming soon)',
+              t('Everything in Free plus'),
+              t('Extract emails'),
+              t('Extract social medias'),
+              t('Extract Kgmid, Plus code, etc'),
+              t('Automatic bulk extract (coming soon)'),
             ]}
           />
         </div>

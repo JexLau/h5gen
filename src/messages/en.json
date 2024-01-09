@@ -39,7 +39,7 @@
     "How to Use Free Maps Scraper Chrome Extension": "How to Use Free Maps Scraper Chrome Extension",
     "Search on Google Maps": "Search on Google Maps",
     "Start by pinpointing the exact business locations": "Start by pinpointing the exact business locations you're interested in with our search feature. Type in relevant keywords, and our Free Maps Scraper will comb through Google Maps to find every potential lead. ",
-    "Open The Chrome Extension":"Open The Chrome Extension",
+    "Open The Chrome Extension": "Open The Chrome Extension",
     "Navigate to the area of interest on Google Maps": "Navigate to the area of interest on Google Maps, then activate the freemapsscraper Chrome extension with a single click. It's that simple—no complex setup or configuration needed. Just a few seconds and you're on your way to compiling a robust database of leads.",
     "Export Your Results": "Export Your Results",
     "Once the scraping is complete": "Once the scraping is complete, you can export the data into a CSV or XLS file for easy analysis and integration. With support for an unlimited number of exports, freemapsscraper ensures that you have continuous access to the latest data. The export includes essential information like phone numbers, email addresses, exact locations, and social media profiles—everything you need to connect with your targeted audience effectively.",
@@ -76,120 +76,47 @@
     "Place Id": "A unique textual identifier that distinguishes a specific place.",
     "Kgmid": "An identifier used specifically for the Google Knowledge Graph API."
   },
-  "StartWithBing": {
-    "Get Started for Free": "Get Started for Free",
-    "h2": "Getting Started with Bing Maps Scraper",
-    "desc1": "To begin using Bing Maps Scraper, follow these simple steps:",
-    "Step 1": "Step 1: Install the Bing Maps Scraper Tool",
-    "desc2": "Start by installing the Bing Maps Scraper tool on your chrome. This can be done by downloading following the installation url provided.",
-    "desc5": "Once installed, you'll have access to the powerful features of Bing Maps Scraper.",
-    "Step 2": "Step 2: Start the Free Version of Bing Maps Scraper Tool",
-    "desc3": "After installation, launch the free version of the Bing Maps Scraper tool.",
-    "desc6": "This version typically offers basic functionality and take some time to familiarize yourself with the user interface and available options.",
-    "Step 3": "Step 3: Start Scraping Data From the Tool",
-    "desc4": "With the Bing Maps Scraper tool up and running, you can now start scraping data from Bing Maps. Your search criteria such as location, keywords, or categories to narrow down your results.",
-    "desc7": "The scraper will then extract relevant information such as contact details, addresses, categories, and more from Bing Maps."
-  },
-  "FeatureSection": {
-    "Lead Generation": "Lead Generation",
-    "Lead Generation Desc": "Extracts business listing data like names, emails, and phone numbers that can be used to generate sales leads and grow your customer database.",
-    "Get Started": "Get Started",
-    "Market Research": "Market Research",
-    "Market Research Desc": "Pulls competitor information, analyzes industry trends, monitors online reputation, and provides other market insights.",
-    "Data Automation": "Data Automation",
-    "Data Automation Desc": "Scrapes large amounts of listing data from {type} Maps with one click and exports to spreadsheet for analysis. Saves time vs manual copying."
-  },
   "PricingSection": {
-    "Pricing Plans": "Pricing Plans",
-    "desc": "Get started for free. Go pro when you're ready, cancel anytime.",
-    "Most popular": "Most popular",
-    "Buy plan": "Buy plan",
-    "Get Started": "Get Started",
-    "month": "month",
-    "googleTiers": {
-      "Free": {
-        "name": "Free",
-        "description": "Monthly leads export 1,000 <br/>Export 15 records at a time",
-        "subDesc": "",
-        "features1": "Custom export settings",
-        "features2": "Extract basic information",
-        "features3": "Extract phone numbers",
-        "features4": "Extract Website、Cid and Place Id"
-      },
-      "Monthly": {
-        "name": "Pro(Monthly)",
-        "description": "Monthly leads export 100,000 <br/> Export Unlimited records at a time",
-        "subDesc": "Everything in Free plus:",
-        "features1": "Extract emails",
-        "features2": "Extract social medias",
-        "features3": "Extract Kgmid, Plus code, etc",
-        "features4": "Automatic bulk extract (coming soon)"
-      },
-      "Yearly": {
-        "name": "Pro(Yearly)",
-        "description": "Monthly leads export 100,000 <br/> Export Unlimited records at a time",
-        "subDesc": "Everything in Free plus:",
-        "features1": "Extract emails",
-        "features2": "Extract social medias",
-        "features3": "Extract Kgmid, Plus code, etc",
-        "features4": "Automatic bulk extract (coming soon)"
-      }
-    },
-    "bingTiers": {
-      "Free": {
-        "name": "Free",
-        "description": "Monthly leads export 1,000 <br/>Export 15 records at a time",
-        "subDesc": "",
-        "features1": "Custom export settings",
-        "features2": "Extract basic information",
-        "features3": "Extract phone numbers",
-        "features4": "Extract Website、Cid and Place Id"
-      },
-      "Monthly": {
-        "name": "Pro(Monthly)",
-        "description": "Monthly leads export 100,000 <br/> Export Unlimited records at a time",
-        "subDesc": "Everything in Free plus:",
-        "features1": "Extract emails",
-        "features2": "Extract social medias",
-        "features3": "Automatic bulk extract (coming soon)"
-      },
-      "Yearly": {
-        "name": "Pro(Yearly)",
-        "description": "Monthly leads export 100,000 <br/> Export Unlimited records at a time",
-        "subDesc": "Everything in Free plus:",
-        "features1": "Extract emails",
-        "features2": "Extract social medias",
-        "features3": "Automatic bulk extract (coming soon)"
-      }
-    }
+    "Simple pricing for everyone": "Simple pricing for everyone.",
+    "our software will work well for you": "It doesn't matter what size your business is, our software will work well for you.",
+    "Monthly leads export 1,000 and Export 15 records at a time": "Monthly leads export 1,000 Export 15 records at a time.",
+    "Custom export settings": "Custom export settings",
+    "Extract basic information": "Extract basic information",
+    "Extract phone numbers": "Extract phone numbers",
+    "featurExtract Website、Cid and Place Ides4": "Extract Website、Cid and Place Id",
+    "Everything in Free plus": "Everything in Free plus:",
+    "Extract emails": "Extract emails",
+    "Extract social medias": "Extract social medias",
+    "Automatic bulk extract (coming soon)": "Automatic bulk extract (coming soon)",
+    "Get Started": "Get Started"
   },
-  "Friendly": {
-    "h2": "They use Map Lead Scraper daily with",
-    "bh2": "That’s What Our Clients Say",
-    "Mike": "{type} Maps Scraper has proven to be an incredibly reliable tool. It consistently delivers valuable leads from local businesses that have greatly aided our marketing efforts. I couldn't recommend it more!",
-    "Sally": "This tool is a game-changer. Its user-friendly interface and one-click operation have streamlined our lead generation process immensely. Truly, {type} Maps Scraper is as convenient as it gets.",
-    "Dennis": "Fantastic tool! It works precisely as advertised, saving me countless hours in data collection. A huge shout-out to the developers for creating such a time-saving tool!",
-    "Henry": "{type} Maps Scraper has become an indispensable part of my toolkit for B2B cold emails. It's a high-performing tool for scraping ${type} Maps data, and I use it daily. Simply irreplaceable.",
-    "Krasner": "I can't express how grateful I am for this incredible scraper. It's simple, efficient, doesn't require much disk space, and it's super easy to use. The customer support is also top-notch - they've exceeded all my expectations.",
-    "Rachel": "The interface is super simple and intuitive. Map Lead Scraper saves me countless hours I used to spend manually collecting and organizing leads."
+  "Testimonials": {
+    "h2": "Loved by businesses worldwide.",
+    "desc": "Our software is so simple that people can’t help but fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.",
+    "Sheryl Berge": "Freemapsscraper's simplicity is its genius. Everything I need for lead generation is right at my fingertips, without any complication.",
+    "Amy Hahn": "Whenever I have questions, the freemapsscraper support team is quick to assist. Their responsiveness is top-notch!",
+    "Leland Kiehn": "Since using freemapsscraper, our outreach efforts have become more targeted and effective. It's a game-changer for our sales team.",
+    "Erin Powlowski": "Transitioning to freemapsscraper was the best decision. The amount of time it has saved us on lead generation is incredible.",
+    "Peter Renolds": "The detailed data freemapsscraper provides has refined our marketing strategy. It's invaluable to have such precise information!",
+    "Rachel": "I'm really impressed with the quality of data from freemapsscraper. It's not just the quantity of leads but the accuracy that has helped us grow."
   },
-  "FAQs": {
+  "Faqs": {
     "h2": "Frequently asked questions",
     "desc1": "Have a different question about Map Lead Scraper and can’t find the answer you’re looking for? Reach out to our support team by ",
     "desc2": " sending us an email ",
     "desc3": " and we’ll get back to you as soon as we can.",
-    "q0": "How does it get email addresses that aren't shown on {type} Maps?",
-    "a0": "The extractor visits each business website found on {type} Maps to look for a contact page or email address listed there. Emails aren't on {type} Maps but are usually on the business site.",
-    "q1": "Does it work on Mac or only on Windows?",
-    "a1": "The {type} Maps extractor is a browser extension/plugin that can run on any operating system, including Windows, macOS, Linux etc. As long as you have the Chrome browser installed and add the extension.",
-    "q2": "Why don't I get all the results when searching a large region?",
-    "a2": "For large regions like a whole state, search smaller areas like cities or ZIP codes instead. Search 'Los Angeles restaurants' rather than 'California restaurants' for example.",
-    "q3": "Does it work for maps other than {type} Maps?",
-    "a3": "Currently it only works for {type} Maps, but we can create custom scrapers for other map sources if needed.",
-    "q4": "What are the differences between the free and paid versions?",
-    "a4": "The paid version removes all record limits, unlocks more advanced functionality and includes automatic batch extraction. The free version is limited to 15 listings per search.",
-    "q5": "How do I cancel my subscription?",
-    "a5": "There you can cancel your current subscription. From within the extractor app, go to the settings menu and click 'Manage Subscription'. Or contact customer support via email and request to cancel your subscription."
+    "q0": "How can the tool obtain email addresses if they are not visible on Google Maps?",
+    "a0": "Our Google Maps scraper extends its search beyond Maps by visiting each business's official website found through Google Maps. It searches for contact pages or directly listed email addresses, thereby providing you with email details not typically found on Google Maps itself.",
+    "q1": "Is the Google Maps extractor compatible with Mac or is it Windows exclusive?",
+    "a1": "Our browser-based Google Maps extractor is versatile and runs on any operating system that supports Chrome browser, including but not limited to Windows, macOS, and Linux. Simply install it as an extension to your Chrome browser.",
+    "q2": "Why am I not seeing all results when I search across large regions?",
+    "a2": "To optimize search efficiency and accuracy, it's recommended to focus on smaller areas, particularly for extensive regions. Instead of searching for 'California restaurants', narrow it down to 'Los Angeles restaurants' or specific ZIP codes to get more precise results.",
+    "q3": "Can this tool extract data from maps other than Google Maps?",
+    "a3": "While our tool is currently specialized for Google Maps data extraction, we acknowledge the diverse needs of our users. Should you require scraping services for other map sources, we are equipped to develop customized solutions upon request.",
+    "q4": "What distinguishes the free version from the paid version of the tool?",
+    "a4": "The free version of our tool provides a glimpse into the efficient scraping capabilities, allowing up to 15 listings per search. On the other hand, the paid version offers unlimited records, advanced functionalities, and supports automatic batch extraction, providing a comprehensive and streamlined experience.",
+    "q5": "How can I cancel my subscription?",
+    "a5": "To cancel your subscription, simply go to the settings menu within the extractor app and select 'Manage Subscription'. If you prefer, you can also reach out to our customer support via email with a request to cancel your subscription, and we'll assist you promptly."
   },
   "Footer": {
     "Footer": "Footer",
@@ -203,14 +130,11 @@
     "Rights": "2022-PRESENT MapLeadScraper. All rights Reserved",
     "Bing Maps Scraper": "Bing Maps Scraper"
   },
-  "DownloadSection": {
-    "h1": "Google Maps Scraper Chrome Extension",
-    "h1sub": "Download to Get your Leads",
+  "DownloadPage": {
+    "h1": "Download Free Maps Scraper Chrome Extension",
+    "h1sub": "Free Maps Scraper is a chrome browser extension that helps users to scrape and extract information from Google Maps. Please follow the instructions below to install and get started.",
     "desc": "Map Lead Scraper is a chrome browser extension that helps users to scrape and extract information from Google Maps. Please follow the instructions below to install and get started.",
-    "Download now": "Download now",
-    "Updated": "Updated"
-  },
-  "InstallationGuide": {
+    "Installation Guide": "Installation Guide",
     "3-Step Process": "3-Step Process",
     "Step 1": "Step 1: Download and Unpack Chrome Extension",
     "desc1": "Download: after downloading, unzip the extension.",
@@ -224,10 +148,10 @@
     "desc7": "Finish the installation. The extension should now be in your installed extensions list.",
     "Note": "NOTE: Pin for Easier Access",
     "Note1": "1. The new extension may not appear in the extensions bar by default. To pin it, click the Extensions icon (puzzle piece) in the top-right corner. Find your extension in the dropdown list and click the pin icon next to it.",
-    "Note2": " 2. The extension will now be visible in your Chrome toolbar."
-  },
-  "Summary": {
-    "Conclusion": "Conclusion",
-    "desc1": "In summary, it just takes confirming the extension install prompts, and pinning it for easy access to start using Google Maps Scraper on Google Maps in Chrome. Let me know if you need any clarification or have additional questions!"
+    "Note2": " 2. The extension will now be visible in your Chrome toolbar.",
+    "Feedback": "Support and Feedback",
+    "desc8": "Your experience is important to us. If you have any issues or suggestions, our support team is eager to assist.",
+    "desc9": "Contact us through our support page, and we'll help you make the most out of Free Maps Scraper",
+    "Download now": "Download now"
   }
 }

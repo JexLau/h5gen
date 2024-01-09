@@ -3,6 +3,7 @@ import { FreeToTry } from '@/components/DownloadBtn'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Metadata } from 'next'
+import { useTranslations } from 'next-intl'
 
 export const metadata: Metadata = {
   title: 'Download the Free Maps Scraper Chrome Extension',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 }
 
 const DownloadPage = () => {
+  const t = useTranslations('DownloadPage')
   return (
     <>
       <Header downloadText={"Download now"} />
@@ -23,35 +25,46 @@ const DownloadPage = () => {
           <Container>
             <div className="text-center space-y-4">
               <h1 className="text-4xl font-semibold text-gray-900 sm:text-5xl mt-20">
-                Download Free Maps Scraper Chrome Extension
+                {t('h1')}
               </h1>
               <p className="text-xl text-gray-500">
-                Free Maps Scraper is a chrome browser extension that helps users to scrape and extract information from Google Maps. Please follow the instructions below to install and get started.
+                {t('h1sub')}
               </p>
             </div>
             <div className="mt-10">
+                  <h2 className="text-2xl font-semibold text-gray-900 my-4">{t("Installation Guide")}</h2>
               <div className="space-y-8">
                 <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <h2 className="text-2xl font-semibold text-gray-900 my-4">Installation Guide</h2>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                    <li>{`Click the "Download Extension" button to initiate the installation. You'll be redirected to the Chrome Web Store. Or Search "freemapsscraper" in Chrome Web Store`}</li>
-                    <li>Select “Add to Chrome” to begin the process.</li>
-                    <li>{`Click on the Free Maps Scraper icon and visit the 'Options' to customize your scraping settings.`}</li>
-                    <li>Head over to Google Maps in your browser and perform a search.</li>
-                    <li>Activate Free Maps Scraper by clicking its icon when your search results are loaded.</li>
-                    <li>{`Export your data by clicking the 'Export' button after the scraper finishes.`}</li>
+                  <ol className="list-decimal list-inside space-y-6 text-gray-700">
+                  <h3 className="text-xl font-semibold text-gray-900 flex items-center">{t("Step 1")}</h3>
+                    <li>{t("desc1")}</li>
+                    <li>{t("desc2")}</li>
+
+                    <h3 className="text-xl font-semibold text-gray-900 flex items-center">{t("Step 2")}</h3>
+                    <li>{t("desc3")}</li>
+                    <li>{t("desc4")}</li>
+                    <li>{t("desc5")}</li>
+
+                    <h3 className="text-xl font-semibold text-gray-900 flex items-center">{t("Step 3")}</h3>
+                    <li>{t("desc6")}</li>
+                    <li>{t("desc7")}</li>
                   </ol>
                 </div>
 
+                <h3 className="text-xl font-semibold text-gray-900 flex items-center">{t("Note")}</h3>
+                <p>{t("Note1")}</p>
+                <p>{t("Note2")}</p>
+
                 <div className="text-center">
-                  <FreeToTry text='Download now' />
+                  <FreeToTry text={t("Download now")} />
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <h2 className="text-xl font-semibold text-gray-900">Support and Feedback</h2>
+                <h2 className="text-2xl my-6 font-semibold text-gray-900">{t("Feedback")}</h2>
+                <div className="bg-gray-50 p-6 rounded-lg shadow-sm space-y-4">
                   <p className="text-gray-700">
-                    {`Your experience is important to us. If you have any issues or suggestions, our support team is eager to assist. Contact us through our support page, and we'll help you make the most out of Free Maps Scraper.`}
+                    {t("desc8")}
                   </p>
+                  <p className="text-gray-700">{t("desc9")}</p>
                 </div>
               </div>
             </div>

@@ -1,10 +1,10 @@
-import Link from 'next/link'
-
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '@/components/NavLink'
+import { useTranslations } from 'next-intl'
 
 export function Footer() {
+  const t = useTranslations('Header')
   return (
     <footer className="bg-slate-50">
       <Container>
@@ -12,9 +12,9 @@ export function Footer() {
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#datafields">Datafields</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              <NavLink href="#features">{t("Features")}</NavLink>
+              <NavLink href="#datafields">{t("Datafields")}</NavLink>
+              <NavLink href="#pricing">{t("Pricing")}</NavLink>
               {/* <NavLink href="#contact">Contact</NavLink> */}
               <NavLink href="#faq">FAQs</NavLink>
             </div>

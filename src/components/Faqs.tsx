@@ -2,39 +2,42 @@ import Image from 'next/image'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-faqs.jpg'
+import { useTranslations } from 'next-intl'
+
+
+export function Faqs() {
+  const  t = useTranslations('Faqs')
 
 const faqs = [
   [
     {
-      "question": "How can the tool obtain email addresses if they are not visible on Google Maps?",
-      "answer": "Our Google Maps scraper extends its search beyond Maps by visiting each business's official website found through Google Maps. It searches for contact pages or directly listed email addresses, thereby providing you with email details not typically found on Google Maps itself."
+      "question": t('q0'),
+      "answer": t('a0')
     },
     {
-      "question": "Is the Google Maps extractor compatible with Mac or is it Windows exclusive?",
-      "answer": "Our browser-based Google Maps extractor is versatile and runs on any operating system that supports Chrome browser, including but not limited to Windows, macOS, and Linux. Simply install it as an extension to your Chrome browser."
+      "question": t('q1'),
+      "answer": t('a1')
     },
   ],
   [
     {
-      "question": "Why am I not seeing all results when I search across large regions?",
-      "answer": "To optimize search efficiency and accuracy, it's recommended to focus on smaller areas, particularly for extensive regions. Instead of searching for 'California restaurants', narrow it down to 'Los Angeles restaurants' or specific ZIP codes to get more precise results."
+      "question": t('q2'),
+      "answer": t('a2')
     }, {
-      "question": "Can this tool extract data from maps other than Google Maps?",
-      "answer": "While our tool is currently specialized for Google Maps data extraction, we acknowledge the diverse needs of our users. Should you require scraping services for other map sources, we are equipped to develop customized solutions upon request."
+      "question": t('q3'),
+      "answer": t('a3')
     },],
   [
 
     {
-      "question": "What distinguishes the free version from the paid version of the tool?",
-      "answer": "The free version of our tool provides a glimpse into the efficient scraping capabilities, allowing up to 15 listings per search. On the other hand, the paid version offers unlimited records, advanced functionalities, and supports automatic batch extraction, providing a comprehensive and streamlined experience."
+      "question": t('q4'),
+      "answer": t('a4')
     },
     {
-      "question": "How can I cancel my subscription?",
-      "answer": "To cancel your subscription, simply go to the settings menu within the extractor app and select 'Manage Subscription'. If you prefer, you can also reach out to our customer support via email with a request to cancel your subscription, and we'll assist you promptly."
+      "question": t('q5'),
+      "answer": t('a5')
     }]
 ]
-
-export function Faqs() {
   return (
     <section
       id="faq"
@@ -55,10 +58,11 @@ export function Faqs() {
             id="faq-title"
             className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
           >
-            Frequently asked questions
+            {t('h2')}
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Have a different question about Map Lead Scraper and can’t find the answer you’re looking for? Reach out to our support team by <a href="mailto:freemapsscraper@gmail.com" className="text-indigo-600"> sending us an email</a> and we’ll get back to you as soon as we can.
+            {t('desc1')} <a href="mailto:freemapsscraper@gmail.com" className="text-indigo-600"> {t('desc2')}</a> 
+            {t('desc3')}
           </p>
         </div>
         <ul

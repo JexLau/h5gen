@@ -6,70 +6,7 @@ import avatarImage2 from '@/images/avatars/avatar-2.png'
 import avatarImage3 from '@/images/avatars/avatar-3.png'
 import avatarImage4 from '@/images/avatars/avatar-4.png'
 import avatarImage5 from '@/images/avatars/avatar-5.png'
-
-const testimonials = [
-  [
-    {
-      content:
-        `Freemapsscraper's simplicity is its genius. Everything I need for lead generation is right at my fingertips, without any complication.`,
-      author: {
-        name: 'Sheryl Berge',
-        role: 'CEO at Lynch LLC',
-        image: avatarImage1,
-      },
-    },
-    {
-      content:
-        'Whenever I have questions, the freemapsscraper support team is quick to assist. Their responsiveness is top-notch!',
-      author: {
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
-        image: avatarImage4,
-      },
-    },
-  ],
-  [
-    {
-      content:
-        `Since using freemapsscraper, our outreach efforts have become more targeted and effective. It's a game-changer for our sales team.`,
-      author: {
-        name: 'Leland Kiehn',
-        role: 'Founder of Kiehn and Sons',
-        image: avatarImage5,
-      },
-    },
-    {
-      content:
-        'Transitioning to freemapsscraper was the best decision. The amount of time it has saved us on lead generation is incredible.',
-      author: {
-        name: 'Erin Powlowski',
-        role: 'COO at Armstrong Inc',
-        image: avatarImage2,
-      },
-    },
-  ],
-  [
-    {
-      content:
-        `The detailed data freemapsscraper provides has refined our marketing strategy. It's invaluable to have such precise information!`,
-      author: {
-        name: 'Peter Renolds',
-        role: 'Founder of West Inc',
-        image: avatarImage3,
-      },
-    },
-    {
-      content:
-        `I'm really impressed with the quality of data from freemapsscraper. It's not just the quantity of leads but the accuracy that has helped us grow.`,
-      author: {
-        name: 'Amy Hahn',
-        role: 'Director at Velocity Industries',
-        image: avatarImage4,
-      },
-    },
-  ],
-]
-
+import { useTranslations } from 'next-intl'
 
 function QuoteIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -80,6 +17,63 @@ function QuoteIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export function Testimonials() {
+  const t = useTranslations('Testimonials')
+
+const testimonials = [
+  [
+    {
+      content: t('Sheryl Berge'),
+      author: {
+        name: 'Sheryl Berge',
+        image: avatarImage1,
+      },
+    },
+    {
+      content:
+        t('Amy Hahn'),
+      author: {
+        name: 'Amy Hahn',
+        image: avatarImage4,
+      },
+    },
+  ],
+  [
+    {
+      content: t('Leland Kiehn'),
+      author: {
+        name: 'Leland Kiehn',
+        role: 'Founder of Kiehn and Sons',
+        image: avatarImage5,
+      },
+    },
+    {
+      content: t('Erin Powlowski'),
+      author: {
+        name: 'Erin Powlowski',
+        role: 'COO at Armstrong Inc',
+        image: avatarImage2,
+      },
+    },
+  ],
+  [
+    {
+      content:
+        t("Peter Renolds"),
+      author: {
+        name: 'Peter Renolds',
+        image: avatarImage3,
+      },
+    },
+    {
+      content: t('Rachel'),
+      author: {
+        name: 'Rachel',
+        image: avatarImage4,
+      },
+    },
+  ],
+]
+
   return (
     <section
       id="testimonials"
@@ -89,10 +83,10 @@ export function Testimonials() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-          Loved by businesses worldwide.
+           {t('h2')}
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-          Our software is so simple that people can’t help but fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.
+           {t('desc')}
           </p>
         </div>
 
@@ -116,9 +110,6 @@ export function Testimonials() {
                         <div>
                           <div className="font-display text-base text-slate-900">
                             {testimonial.author.name}
-                          </div>
-                          <div className="mt-1 text-sm text-slate-500">
-                            {testimonial.author.role}
                           </div>
                         </div>
                         <div className="overflow-hidden rounded-full bg-slate-50">
