@@ -6,13 +6,13 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import { FreeToTry } from '../DownloadBtn'
 
 interface PrimaryFeaturesProps extends PropsWithChildren {
   features: Array<{ title: string; description: string; image: StaticImageData }>
+  slot?: React.ReactNode
 } 
 
-export function FeatureClient({children, features}: PrimaryFeaturesProps) {
+export function FeatureClient({children, features, slot}: PrimaryFeaturesProps) {
   let [tabOrientation, setTabOrientation] = useState<'horizontal' | 'vertical'>(
     'horizontal',
   )
@@ -119,9 +119,7 @@ export function FeatureClient({children, features}: PrimaryFeaturesProps) {
           )}
         </Tab.Group>
       </Container>
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-        <FreeToTry />
-      </div>
+      {slot}
     </section>
   )
 }

@@ -2,18 +2,7 @@ import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
-import { type Metadata } from 'next'
 import { Umami } from '@/components/Umami'
-
-export const metadata: Metadata = {
-  title: {
-    template: '%s | freemapsscraper',
-    default: 'Google Maps Scraper: Free & Easy to Use - Free Maps Scraper',
-  },
-  description:
-    'Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!',
-  alternates: { canonical: "https://www.freemapsscraper.com/", }
-}
 
 const inter = Inter({
   subsets: ['latin'],

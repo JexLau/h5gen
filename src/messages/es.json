@@ -25,7 +25,7 @@
   },
   "LocaleSwitcher": {
     "label": "Сменить язык",
-    "locale": "{locale, select, ja {日本語} en {English} es {Español} ko {한국어} de {Deutsch} fr {Français} pt {Português} ru {Русский} other {English}}"
+    "locale": "{locale, select, ja {日本語} en {English} es {Español} ko {한국어} de {Deutsch} fr {Français} pt {Português} vi {Tiếng Việt} other {English}}"
   },
   "Hero": {
     "Easy": "Легко в Использовании",

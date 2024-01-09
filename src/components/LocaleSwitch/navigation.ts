@@ -1,6 +1,7 @@
 import { createLocalizedPathnamesNavigation } from 'next-intl/navigation';
 
-export const Locales = ['en', 'ja', 'es', 'ko', 'de', 'fr', 'pt', 'ru'] as const;
+// "FR" 代表法语 (Fran\u00e7ais)，"PT" 代表葡萄牙语 (Portugu\u00eas)，而 "VI" 则代表越南语.
+export const Locales = ['en', 'ja', 'es', 'ko', 'de', 'fr', 'pt', 'vi'] as const;
 export const LocalePrefix = 'as-needed';
 export const LocalePathnames = {
   '/': '/'

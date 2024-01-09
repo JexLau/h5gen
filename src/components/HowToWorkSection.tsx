@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 export const HowToWorkSection = () => {
   const t = useTranslations("HowToWorkSection")
-  // const ct = useTranslations("Common")
+  const ct = useTranslations("Common")
   // console.log('ct', ct)
   return (
     <section
@@ -47,7 +47,7 @@ export const HowToWorkSection = () => {
         </div>
       </Container>
       <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-        <FreeToTry  />
+        <FreeToTry text={ct("Free to try")} />
       </div>
     </section>
   );

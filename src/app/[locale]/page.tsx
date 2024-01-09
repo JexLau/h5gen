@@ -9,17 +9,16 @@ import { Meta } from '@/components/Meta'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
-import { baseurl, getHrefLang } from '@/utils/constants'
-import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 
 export default function Home({ params }: { params: Record<string, string> }) {
   const { locale = 'en' } = params;
   const t = useTranslations('Index')
+  const ct = useTranslations('Common')
   return (
     <>
       <Meta title={t('title')} description={t('description')} locale={locale} />
-      <Header />
+      <Header downloadText={ct("Free to try")} />
       <main>
         <Hero />
         <PrimaryFeatures />

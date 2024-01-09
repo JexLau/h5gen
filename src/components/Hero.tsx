@@ -36,7 +36,7 @@ export function Hero() {
        {t('text2')}
       </p>
       <div className="mt-10 flex justify-center gap-x-6">
-        <FreeToTry />
+        <FreeToTry text={ct("Free to try")} />
         {/* <Button
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           variant="outline"
