@@ -5,25 +5,20 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
 import { HowToWorkSection } from '@/components/HowToWorkSection'
+import { Meta } from '@/components/Meta'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
+import { baseurl, getHrefLang } from '@/utils/constants'
 import { Metadata } from 'next'
+import { useTranslations } from 'next-intl'
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | freemapsscraper',
-    default: 'Google Maps Scraper: Free & Easy to Use - Free Maps Scraper',
-  },
-  description:
-    'Free Maps Scraper: an efficient, easy-to-use tool for extracting business leads from Google Maps. Quickly gather phone numbers, emails, and more. Free to try!',
-    alternates: { canonical: "https://www.freemapsscraper.com/", } 
-}
-
-
-export default function Home() {
+export default function Home({ params }: { params: Record<string, string> }) {
+  const { locale = 'en' } = params;
+  const t = useTranslations('Index')
   return (
     <>
+      <Meta title={t('title')} description={t('description')} locale={locale} />
       <Header />
       <main>
         <Hero />

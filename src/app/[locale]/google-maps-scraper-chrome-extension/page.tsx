@@ -2,20 +2,17 @@ import { Container } from '@/components/Container'
 import { FreeToTry } from '@/components/DownloadBtn'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { Metadata } from 'next'
+import { Meta } from '@/components/Meta'
 import { useTranslations } from 'next-intl'
 
-export const metadata: Metadata = {
-  title: 'Download the Free Maps Scraper Chrome Extension',
-  description:
-    'Step into the world of effortless data extraction with the Free Maps Scraper, a Chrome extension that streamlines your lead generation process. Download our free and easy-to-use tool today and start harvesting valuable data from Google Maps.',
-  alternates: { canonical: "https://www.freemapsscraper.com/google-maps-scraper-chrome-extension", }
-}
-
-const DownloadPage = () => {
+const DownloadPage = ({ params }: { params: Record<string, string> }) => {
+  const tm = useTranslations('Download')
   const t = useTranslations('DownloadPage')
+  const { locale = 'en' } = params;
+  
   return (
     <>
+      <Meta title={tm('title')} description={tm('description')} locale={locale} pageurl="/google-maps-scraper-chrome-extension" />
       <Header downloadText={t("Download now") + " 2.2.5"} href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
       <main>
         <section
