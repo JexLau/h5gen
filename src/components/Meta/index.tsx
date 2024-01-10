@@ -24,8 +24,9 @@ export const Meta = ({ title, description, locale = 'en', pageurl, image = "http
     <link rel="alternate" hrefLang="de" href={getHrefLang('de')} />
     <link rel="alternate" hrefLang="ko" href={getHrefLang('ko')} />
     <link rel="alternate" hrefLang="es" href={getHrefLang('es')} />
-    <link rel="alternate" hrefLang="p" href={getHrefLang('p')} />
-    <link rel="alternate" hrefLang="es" href={getHrefLang('es')} />
+    <link rel="alternate" hrefLang="pt" href={getHrefLang('pt')} />
+    <link rel="alternate" hrefLang="vi" href={getHrefLang('vi')} />
+    <link rel="alternate" hrefLang="fr" href={getHrefLang('fr')} />
     <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={"FreeMapsScraper"} />
