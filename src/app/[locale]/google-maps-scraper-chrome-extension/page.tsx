@@ -13,7 +13,7 @@ const DownloadPage = ({ params }: { params: Record<string, string> }) => {
   return (
     <>
       <Meta title={tm('title')} description={tm('description')} locale={locale} pageurl="/google-maps-scraper-chrome-extension" />
-      <Header downloadText={t("Download now") + " 2.2.5"} href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
+      <Header downloadText={t("Download now") + " 2.2.5"} href='https://www.freemapsscraper.com/Map_Leads_Scraper 2.2.5.zip' />
       <main>
         <section
           aria-label="Download the Free Maps Scraper Chrome Extension"
@@ -53,7 +53,7 @@ const DownloadPage = ({ params }: { params: Record<string, string> }) => {
                 <p>{t("Note2")}</p>
 
                 <div className="text-center">
-                  <FreeToTry text={t("Download now")+" (2.2.5)"} isDownload href='https://www.mapleadscraper.com/Map_Leads_Scraper 2.2.5.zip' />
+                  <FreeToTry text={t("Download now")+" (2.2.5)"} isDownload href='https://www.freemapsscraper.com/Map_Leads_Scraper 2.2.5.zip' />
                 </div>
 
                 <h2 className="text-2xl my-6 font-semibold text-gray-900">{t("Feedback")}</h2>
