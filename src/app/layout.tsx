@@ -2,7 +2,6 @@ import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
-import { Umami } from '@/components/Umami'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,22 +17,17 @@ const lexend = Lexend({
 
 export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode
-  params: Record<string, string>
 }) {
-  const { locale } = params
   return (
     <html
-      lang={locale}
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
         inter.variable,
         lexend.variable,
       )}
     >
-      <Umami />
       <body className="flex h-full flex-col">{children}</body>
     </html>
   )
