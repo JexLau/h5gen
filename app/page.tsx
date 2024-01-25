@@ -44,7 +44,7 @@ export default function DefaulPage() {
 
   return (
     <main>
-      <div style={{ display: 'flex' }} className='bg-slate-700'>
+      <div className='flex'>
         {generateContent()}
       </div>
     </main>
