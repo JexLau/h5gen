@@ -22,19 +22,20 @@ export default function AdminPage() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [newTaskData, setNewTaskData] = useState<Task>({
-    id: '', images: [{
-      link: '',
-      name: '',
+    id: '',
+    images: [{
+      link: `${location.origin}/a1`,
+      name: 'a1',
       pic: '/images/1.jpg',
       id: 1,
     }, {
-      link: '',
-      name: '',
+      link: `${location.origin}/a3`,
+      name: 'a2',
       pic: '/images/1.jpg',
       id: 2,
     }, {
-      link: '',
-      name: '',
+      link: `${location.origin}/a3`,
+      name: 'a3',
       pic: '/images/1.jpg',
       id: 3,
     },]
@@ -55,7 +56,7 @@ export default function AdminPage() {
     if (name === "task") {
       // 如果是任务 ID 的更改
       setNewTaskData({ ...newTaskData, id: value });
-    } else if (name === "name" || name === "link") {
+    } else if (name === "name" || name === "link" || name === "pic") {
       // 如果是任务项的名称或链接的更改
       const updatedImages = newTaskData.images.map((item, idx) => {
         if (idx === index) {
@@ -72,6 +73,10 @@ export default function AdminPage() {
     // 防止表单的默认提交行为
     event.preventDefault();
     console.log(newTaskData);
+    if (!newTaskData.id) {
+      alert('任务ID不能为空');
+      return
+    }
 
     const response = await fetch('/api/task', {
       method: 'POST',
@@ -81,10 +86,7 @@ export default function AdminPage() {
       },
     });
 
-
     if (response.status === 200) {
-      // const task = await response.json();
-      // setTasks([...tasks, task]);
       closeModal();
       getTaskList()
     } else {
@@ -247,7 +249,16 @@ export default function AdminPage() {
                           </td>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                             <div style={{ padding: '10px', width: '50px', height: '50px', position: 'relative' }}>
-                              <Image src={tItem.pic || backgroundImage} layout="fill" objectFit="cover" alt={tItem.name} />
+                              {editingId === `${item.id}-${tItem.id}` ? (
+                                <input
+                                  type="text"
+                                  name="pic"
+                                  value={editFormData.pic}
+                                  onChange={handleEditFormChange}
+                                />
+                              ) : (
+                                <Image src={tItem.pic || backgroundImage} layout="fill" objectFit="cover" alt={tItem.name} />
+                              )}
                             </div>
                           </td>
                           <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
@@ -297,7 +308,7 @@ export default function AdminPage() {
                     <label htmlFor="item" className="block text-sm font-medium leading-6 text-gray-900">
                       {`任务项${item.id}`}
                     </label>
-                    <div className="mt-2 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div className="mt-2 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12">
                       <div className="sm:col-span-3">
                         <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
                           名称
@@ -323,6 +334,21 @@ export default function AdminPage() {
                             name="link"
                             id="link"
                             value={item.link}
+                            onChange={(event) => handleNewTaskChange(event, index)}
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+                      <div className="sm:col-span-3">
+                        <label htmlFor="pic" className="block text-sm font-medium leading-6 text-gray-900">
+                          图片链接
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            type="text"
+                            name="pic"
+                            id="pic"
+                            value={item.pic}
                             onChange={(event) => handleNewTaskChange(event, index)}
                             className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                           />
