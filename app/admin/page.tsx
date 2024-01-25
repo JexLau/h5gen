@@ -21,26 +21,30 @@ export default function AdminPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [newTaskData, setNewTaskData] = useState<Task>({
-    id: '',
-    images: [{
-      link: `${location.origin}/a1`,
-      name: 'a1',
-      pic: '/images/1.jpg',
-      id: 1,
-    }, {
-      link: `${location.origin}/a3`,
-      name: 'a2',
-      pic: '/images/1.jpg',
-      id: 2,
-    }, {
-      link: `${location.origin}/a3`,
-      name: 'a3',
-      pic: '/images/1.jpg',
-      id: 3,
-    },]
-  });
+  const [newTaskData, setNewTaskData] = useState<Task>({ id: '', images: [{ link: '', name: '', pic: '', id: 0 }] });
   const [editFormData, setEditFormData] = useState<TaskImage>({ name: '', link: '', pic: '', id: 0 });
+
+  useEffect(() => {
+    setNewTaskData({
+      id: '',
+      images: [{
+        link: `${location.origin}/a1`,
+        name: 'a1',
+        pic: '/images/1.jpg',
+        id: 1,
+      }, {
+        link: `${location.origin}/a3`,
+        name: 'a2',
+        pic: '/images/1.jpg',
+        id: 2,
+      }, {
+        link: `${location.origin}/a3`,
+        name: 'a3',
+        pic: '/images/1.jpg',
+        id: 3,
+      },]
+    })
+  }, []);
 
   const openModal = () => {
     setIsOpen(true);
