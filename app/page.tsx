@@ -12,15 +12,14 @@ interface Task {
     pic?: string,
   }>
 }
-export default function TaskPage(props: any) {
-  const taskId = props.params.taskId;
+export default function DefaulPage() {
   const [task, setTask] = useState<Task>({
     id: '',
     images: []
   });
   // 发送请求
   const getTask = async () => {
-    const res = await fetch(`/api/task?taskId=${taskId}`,);
+    const res = await fetch(`/api/task?taskId=${1}`,);
     const task = await res.json();
     setTask(task.data);
   }
@@ -45,7 +44,7 @@ export default function TaskPage(props: any) {
 
   return (
     <main>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex' }} className='bg-slate-700'>
         {generateContent()}
       </div>
     </main>

@@ -1,8 +1,16 @@
 {
   "id": "task2",
-  "images": {
-    "a1": "https://abc.com/a1",
-    "a2": "https://abc.com/a2",
-    "a3": "https://abc.com/a3"
-  }
+  "images": [{
+    "link": "https://baidu.com/a1",
+    "name": "a1",
+    "pic": "/images/1.jpg"
+  }, {
+    "link": "https://baidu.com/a2",
+    "name": "a2",
+    "pic": "/images/1.jpg"
+  }, {
+    "link": "https://baidu.com/a3",
+    "name": "a3",
+    "pic": "/images/1.jpg"
+  }]
 }
