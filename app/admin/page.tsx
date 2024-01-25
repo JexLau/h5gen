@@ -4,17 +4,66 @@ import Image from 'next/image';
 import backgroundImage from '@/images/background-auth.jpg'
 import { Fragment } from 'react'
 import clsx from "clsx";
+
+interface TaskImage {
+  link: string,
+  name: string,
+  pic: string,
+  id: number,
+}
 interface Task {
   id: string,
-  images: Array<{
-    link: string,
-    name: string,
-    pic?: string,
-  }>
+  images: Array<TaskImage>
 }
 
 export default function AdminPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editFormData, setEditFormData] = useState<TaskImage>({ name: '', link: '', pic: '', id: 0});
+
+  const handleEditClick = (task: Task, image: TaskImage) => {
+    setEditingId(`${task.id}-${image.id}`);
+    setEditFormData({ name: image.name, link: image.link, pic: image.pic, id: image.id});
+  };
+
+  const handleEditFormChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setEditFormData({ ...editFormData, [name]: value });
+  };
+
+  const handleEditFormSubmit = async (taskId: string) => {
+    const { name, link, pic, id } = editFormData;
+    const task = tasks.find((task) => task.id === taskId);
+    if (!task) return;
+    const image = task.images.find((img) => img.id === id);
+    if (!image) return;
+    image.link = link;
+    image.pic = pic;
+    image.name = name;
+
+    const response = await fetch('/api/task', {
+      method: 'POST',
+      body: JSON.stringify({ taskId, json: task }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.status === 200) {
+      // 更新任务列表状态
+      setTasks((prevTasks) =>
+        prevTasks.map((task) =>
+          task.id === taskId
+            ? { ...task, images: task.images.map((img) => (img.name === editFormData.name ? { ...img, ...editFormData } : img)) }
+            : task
+        )
+      );
+      setEditingId(null); // 退出编辑模式
+    } else {
+      // 处理错误
+      console.error('Update failed');
+    }
+  };
 
   const getTaskList = async () => {
     const res = await fetch(`/api/tasks`,);
@@ -97,22 +146,44 @@ export default function AdminPage() {
                       </tr>
                       {item.images.map((tItem, personIdx) => (
                         <tr
-                          key={tItem.name}
+                          key={tItem.id}
                           className={clsx(personIdx === 0 ? 'border-gray-300' : 'border-gray-200', 'border-t')}
                         >
                           <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3">
-                            {tItem.name}
+                            {editingId === `${item.id}-${tItem.id}` ? (
+                              <input
+                                type="text"
+                                name="name"
+                                value={editFormData.name}
+                                onChange={handleEditFormChange}
+                              />
+                            ) : (
+                              tItem.name
+                            )}
                           </td>
-                          <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{tItem.link}</td>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                            <div style={{ padding: '10px', width: '100px', height: '100px', position: 'relative' }}>
+                            {editingId === `${item.id}-${tItem.id}` ? (
+                              <input
+                                type="text"
+                                name="link"
+                                value={editFormData.link}
+                                onChange={handleEditFormChange}
+                              />
+                            ) : (
+                              tItem.link
+                            )}
+                          </td>
+                          <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                            <div style={{ padding: '10px', width: '50px', height: '50px', position: 'relative' }}>
                               <Image src={tItem.pic || backgroundImage} layout="fill" objectFit="cover" alt={tItem.name} />
                             </div>
                           </td>
                           <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-3">
-                            <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                              编辑
-                            </a>
+                            {editingId === `${item.id}-${tItem.id}` ? (
+                              <button className="text-indigo-600 hover:text-indigo-900" onClick={() => handleEditFormSubmit(item.id)}>提交</button>
+                            ) : (
+                              <button className="text-indigo-600 hover:text-indigo-900" onClick={() => handleEditClick(item, tItem)}>编辑</button>
+                            )}
                           </td>
                         </tr>
                       ))}

@@ -19,7 +19,7 @@ export default function DefaulPage() {
   });
   // 发送请求
   const getTask = async () => {
-    const res = await fetch(`/api/task?taskId=${1}`,);
+    const res = await fetch(`/api/task?taskId=${'task1'}`,);
     const task = await res.json();
     setTask(task.data);
   }

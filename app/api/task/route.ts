@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
   // 获取任务列表
   const tasksDirectory = path.join(process.cwd(), './app/api/json');
   if (taskId) {
-    const filePath = path.join(tasksDirectory, `task${taskId}.json`);
+    const filePath = path.join(tasksDirectory, `${taskId}.json`);
     if (fs.existsSync(filePath)) {
       const fileContents = fs.readFileSync(filePath, 'utf8');
       const task = JSON.parse(fileContents);
@@ -35,10 +35,12 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const { taskId, json = {} } = await req.json();
+  console.log('POST', taskId, json)
   // 创建或更新任务
-  const taskId = req.body;
-  const filePath = path.join(process.cwd(), 'tasks', `task${taskId}.json`);
-  fs.writeFileSync(filePath, JSON.stringify(taskId));
+  const tasksDirectory = path.join(process.cwd(), './app/api/json');
+  const filePath = path.join(tasksDirectory, `${taskId}.json`);
+  fs.writeFileSync(filePath, JSON.stringify(json));
   return NextResponse.json({
     status: 200,
     data: taskId,
