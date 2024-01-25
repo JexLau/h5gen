@@ -4,14 +4,15 @@ import Image from 'next/image';
 import backgroundImage from '@/images/background-auth.jpg'
 import { Fragment } from 'react'
 import clsx from "clsx";
+import Modal from 'react-modal';
 
-interface TaskImage {
+export interface TaskImage {
   link: string,
   name: string,
   pic: string,
   id: number,
 }
-interface Task {
+export interface Task {
   id: string,
   images: Array<TaskImage>
 }
@@ -19,11 +20,82 @@ interface Task {
 export default function AdminPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [editFormData, setEditFormData] = useState<TaskImage>({ name: '', link: '', pic: '', id: 0});
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [newTaskData, setNewTaskData] = useState<Task>({
+    id: '', images: [{
+      link: '',
+      name: '',
+      pic: '/images/1.jpg',
+      id: 1,
+    }, {
+      link: '',
+      name: '',
+      pic: '/images/1.jpg',
+      id: 2,
+    }, {
+      link: '',
+      name: '',
+      pic: '/images/1.jpg',
+      id: 3,
+    },]
+  });
+  const [editFormData, setEditFormData] = useState<TaskImage>({ name: '', link: '', pic: '', id: 0 });
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const handleNewTaskChange = (event: any, index: number) => {
+    const { name, value } = event.target;
+
+    if (name === "task") {
+      // 如果是任务 ID 的更改
+      setNewTaskData({ ...newTaskData, id: value });
+    } else if (name === "name" || name === "link") {
+      // 如果是任务项的名称或链接的更改
+      const updatedImages = newTaskData.images.map((item, idx) => {
+        if (idx === index) {
+          return { ...item, [name]: value };
+        }
+        return item;
+      });
+      setNewTaskData({ ...newTaskData, images: updatedImages });
+    }
+  };
+
+
+  const handleSubmit = async (event: any) => {
+    // 防止表单的默认提交行为
+    event.preventDefault();
+    console.log(newTaskData);
+
+    const response = await fetch('/api/task', {
+      method: 'POST',
+      body: JSON.stringify({ taskId: newTaskData.id, json: newTaskData }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+
+    if (response.status === 200) {
+      // const task = await response.json();
+      // setTasks([...tasks, task]);
+      closeModal();
+      getTaskList()
+    } else {
+      // 处理错误
+      console.error('Failed to create new task');
+    }
+  };
 
   const handleEditClick = (task: Task, image: TaskImage) => {
     setEditingId(`${task.id}-${image.id}`);
-    setEditFormData({ name: image.name, link: image.link, pic: image.pic, id: image.id});
+    setEditFormData({ name: image.name, link: image.link, pic: image.pic, id: image.id });
   };
 
   const handleEditFormChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,7 +178,7 @@ export default function AdminPage() {
             <button
               type="button"
               className="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              onClick={handleAddNewTask}
+              onClick={openModal}
             >
               添加任务
             </button>
@@ -195,43 +267,85 @@ export default function AdminPage() {
           </div>
         </div>
       </div>
-
-      {/* <table style={{ width: '100%', textAlign: 'left', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr>
-            <th>Task Name</th>
-            <th>Image</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tasks.map((task) => {
-            return (
-              <tr key={task.id} style={{ borderBottom: '1px solid #ddd' }}>
-                <td style={{ padding: '8px' }}>{task.id}</td>
-                <td style={{ padding: '8px' }}>
-                  <button onClick={() => handleEdit(task.id)} style={{ marginRight: '8px' }}>Edit</button>
-                  <button onClick={() => handleDelete(task.id)}>Delete</button>
-                </td>
-              </tr>
-            )
-            return task.images.map((item, index) => {
-              return (
-                <tr key={task.id + index} style={{ borderBottom: '1px solid #ddd' }}>
-                  <td style={{ padding: '8px' }}>{item.name}</td>
-                  <td style={{ padding: '8px', width: '100px', height: '100px', position: 'relative' }}>
-                    <Image src={item.pic || backgroundImage} layout="fill" objectFit="cover" alt={item.name} />
-                  </td>
-                  <td style={{ padding: '8px' }}>
-                    <button onClick={() => handleEdit(task.id)} style={{ marginRight: '8px' }}>Edit</button>
-                    <button onClick={() => handleDelete(task.id)}>Delete</button>
-                  </td>
-                </tr>
-              )
-            })
-          })}
-        </tbody>
-      </table> */}
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="新建任务"
+      >
+        <h2>新建任务</h2>
+        <form >
+          <div className="space-y-12">
+            <div className="border-b border-gray-900/10 pb-12">
+              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div className="sm:col-span-4">
+                  <label htmlFor="task" className="block text-sm font-medium leading-6 text-gray-900">
+                    任务ID
+                  </label>
+                  <div className="mt-2">
+                    <input type="text" name="task" id="task" autoComplete="task"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      value={newTaskData.id}
+                      onChange={(event) => handleNewTaskChange(event, -1)}
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                {newTaskData.images.map((item, index) => {
+                  return (<div className="sm:col-span-4" key={item.id}>
+                    <label htmlFor="item" className="block text-sm font-medium leading-6 text-gray-900">
+                      {`任务项${item.id}`}
+                    </label>
+                    <div className="mt-2 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                      <div className="sm:col-span-3">
+                        <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
+                          名称
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            value={item.name}
+                            onChange={(event) => handleNewTaskChange(event, index)}
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+                      <div className="sm:col-span-3">
+                        <label htmlFor="link" className="block text-sm font-medium leading-6 text-gray-900">
+                          链接
+                        </label>
+                        <div className="mt-2">
+                          <input
+                            type="text"
+                            name="link"
+                            id="link"
+                            value={item.link}
+                            onChange={(event) => handleNewTaskChange(event, index)}
+                            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>)
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 flex items-center justify-end gap-x-6">
+            <button type="button" className="text-sm font-semibold leading-6 text-gray-900" onClick={closeModal}>
+              取消
+            </button>
+            <button onClick={handleSubmit}
+              type="button"
+              className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              生成任务
+            </button>
+          </div>
+        </form>
+      </Modal>
     </main>
   );
 }
