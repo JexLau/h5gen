@@ -5,17 +5,7 @@ import backgroundImage from '@/images/background-auth.jpg'
 import { Fragment } from 'react'
 import clsx from "clsx";
 import Modal from 'react-modal';
-
-export interface TaskImage {
-  link: string,
-  name: string,
-  pic: string,
-  id: number,
-}
-export interface Task {
-  id: string,
-  images: Array<TaskImage>
-}
+import { Task, TaskImage } from "../page";
 
 export default function AdminPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
