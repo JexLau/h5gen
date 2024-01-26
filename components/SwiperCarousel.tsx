@@ -25,7 +25,7 @@ const SwiperCarousel = ({ images }: { images: string[] }) => {
     >
       {images.map((image, index) => (
         <SwiperSlide key={index} className='w-full h-full'>
-          <Image src={image} alt={`Slide ${index}`} layout="fill" objectFit="cover" />
+          <Image src={image} alt={`Slide ${index}`} className='w-full h-full' width={100} height={100} objectFit="cover" />
         </SwiperSlide>
       ))}
     </Swiper>
