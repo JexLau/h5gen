@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import MainContent from '@/components/Main';
 import { Task } from '../page';
+import { AdDialog } from '@/components/Dialog';
 
 export default function TaskPage(props: any) {
   const taskId = props.params.taskId;
@@ -22,6 +23,7 @@ export default function TaskPage(props: any) {
 
   return (
     <main>
+      <AdDialog />
       <MainContent task={task} />
     </main>
   );

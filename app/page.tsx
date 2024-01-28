@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import MainContent from '@/components/Main';
-
+import { AdDialog } from '@/components/Dialog';
 export interface TaskImage {
   link: string,
   name: string,
@@ -29,6 +29,7 @@ export default function DefaulPage() {
   }, []);
   return (
     <main>
+      <AdDialog />
       <MainContent task={task} />
     </main>
   );
